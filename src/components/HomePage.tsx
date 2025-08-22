@@ -5,6 +5,7 @@ import { ArrowRight, Wifi, Car, Coffee, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroRoom from '@/assets/hero-room.jpg';
 import phuketView from '@/assets/phuket-view.jpg';
+import suiteMain from '@/assets/suite-main.jpg';
 import roomDeluxe from '@/assets/room-deluxe.jpg';
 import roomStandard from '@/assets/room-standard.jpg';
 import { Language } from '@/hooks/useLanguage';
@@ -27,6 +28,11 @@ const HomePage = ({ language }: HomePageProps) => {
       },
       rooms: {
         title: 'Our Beautiful Rooms',
+        premium: {
+          name: 'Premium Studio Suite',
+          description: 'Our largest suite with kitchenette, living area, and hillside views',
+          price: '฿3,500/night'
+        },
         deluxe: {
           name: 'Deluxe Room',
           description: 'Spacious room with modern amenities and private balcony',
@@ -75,6 +81,11 @@ const HomePage = ({ language }: HomePageProps) => {
       },
       rooms: {
         title: 'ห้องพักสวยงามของเรา',
+        premium: {
+          name: 'สวีทพรีเมียมสตูดิโอ',
+          description: 'สวีทที่ใหญ่ที่สุดพร้อมครัวขนาดเล็ก พื้นที่นั่งเล่น และวิวเนินเขา',
+          price: '฿3,500/คืน'
+        },
         deluxe: {
           name: 'ห้องดีลักซ์',
           description: 'ห้องกว้างขวางพร้อมสิ่งอำนวยความสะดวกทันสมัยและระเบียงส่วนตัว',
@@ -180,7 +191,38 @@ const HomePage = ({ language }: HomePageProps) => {
             {t.rooms.title}
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="overflow-hidden hover-lift">
+              <div className="relative h-64">
+                <img
+                  src={suiteMain}
+                  alt="Premium Studio Suite"
+                  className="w-full h-full object-cover"
+                />
+                <Badge className="absolute top-4 left-4 bg-primary">
+                  {language === 'en' ? 'Featured' : 'แนะนำ'}
+                </Badge>
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-primary mb-2">
+                  {t.rooms.premium.name}
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  {t.rooms.premium.description}
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-semibold text-primary">
+                    {t.rooms.premium.price}
+                  </span>
+                  <Link to="/rooms">
+                    <Button variant="outline" size="sm">
+                      {language === 'en' ? 'View Details' : 'ดูรายละเอียด'}
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
             <Card className="overflow-hidden hover-lift">
               <div className="relative h-64">
                 <img
@@ -188,9 +230,6 @@ const HomePage = ({ language }: HomePageProps) => {
                   alt="Deluxe Room"
                   className="w-full h-full object-cover"
                 />
-                <Badge className="absolute top-4 left-4 bg-primary">
-                  {language === 'en' ? 'Popular' : 'ยอดนิยม'}
-                </Badge>
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-primary mb-2">

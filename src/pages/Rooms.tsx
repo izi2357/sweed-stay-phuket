@@ -1,8 +1,12 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Wifi, Car, Coffee, MapPin, Users, Bed, Bath, Wind } from 'lucide-react';
+import { Wifi, Car, Coffee, MapPin, Users, Bed, Bath, Wind, ChefHat, Tv, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import suiteMain from '@/assets/suite-main.jpg';
+import suiteLiving from '@/assets/suite-living.jpg';
+import suiteBalcony from '@/assets/suite-balcony.jpg';
+import suiteBathroom from '@/assets/suite-bathroom.jpg';
 import roomDeluxe from '@/assets/room-deluxe.jpg';
 import roomStandard from '@/assets/room-standard.jpg';
 import { Language } from '@/hooks/useLanguage';
@@ -18,12 +22,49 @@ const Rooms = ({ language }: RoomsProps) => {
       subtitle: 'Choose from our carefully designed rooms, each featuring Scandinavian aesthetics and modern Thai comfort.',
       rooms: [
         {
+          id: 'premium-suite',
+          name: 'Premium Studio Suite',
+          price: '฿3,500',
+          priceNote: 'per night',
+          image: suiteMain,
+          description: 'Our largest and most luxurious accommodation. Spacious studio with kitchenette, living area, and stunning balcony views. Perfect for extended stays or those wanting extra space and comfort.',
+          features: [
+            { icon: Bed, text: 'King Size Bed' },
+            { icon: Users, text: '2-4 Guests' },
+            { icon: ChefHat, text: 'Full Kitchenette' },
+            { icon: Wind, text: 'Air Conditioning' },
+            { icon: Wifi, text: 'Free Wi-Fi' },
+            { icon: Eye, text: 'Balcony with Hills View' }
+          ],
+          amenities: [
+            'Spacious studio layout (45 sqm)',
+            'King size bed with premium linens',
+            'Full kitchenette with refrigerator',
+            'Comfortable living area with sofa',
+            'Private balcony with hillside views',
+            'Modern ensuite bathroom',
+            'Air conditioning throughout',
+            'Free high-speed Wi-Fi',
+            'Flat-screen TV with cable',
+            'Dining area with bar stools',
+            'Microwave and cooking facilities',
+            'Coffee/tea making facilities',
+            'Hair dryer and toiletries',
+            'Safe deposit box',
+            'Work desk area',
+            'Ample storage space'
+          ],
+          popular: true,
+          featured: true,
+          gallery: [suiteMain, suiteLiving, suiteBalcony, suiteBathroom]
+        },
+        {
           id: 'deluxe',
           name: 'Deluxe Room',
           price: '฿2,500',
           priceNote: 'per night',
           image: roomDeluxe,
-          description: 'Spacious room with modern amenities, private balcony, and stunning views. Perfect for couples or small families.',
+          description: 'Spacious room with modern amenities and private balcony. Perfect for couples or small families seeking comfort and style.',
           features: [
             { icon: Bed, text: 'King Size Bed' },
             { icon: Users, text: '2-3 Guests' },
@@ -44,7 +85,8 @@ const Rooms = ({ language }: RoomsProps) => {
             'Hair dryer',
             'Safe deposit box'
           ],
-          popular: true
+          popular: false,
+          featured: false
         },
         {
           id: 'standard',
@@ -73,7 +115,8 @@ const Rooms = ({ language }: RoomsProps) => {
             'Work desk',
             'Wardrobe'
           ],
-          popular: false
+          popular: false,
+          featured: false
         }
       ],
       bookNow: 'Book Now',
@@ -92,6 +135,43 @@ const Rooms = ({ language }: RoomsProps) => {
       title: 'ห้องพักของเรา',
       subtitle: 'เลือกจากห้องพักที่ออกแบบอย่างรอบคอบ แต่ละห้องมีสุนทรียศาสตร์แบบสแกนดิเนเวียและความสะดวกสบายแบบไทยสมัยใหม่',
       rooms: [
+        {
+          id: 'premium-suite',
+          name: 'สวีทพรีเมียมสตูดิโอ',
+          price: '฿3,500',
+          priceNote: 'ต่อคืน',
+          image: suiteMain,
+          description: 'ที่พักที่ใหญ่ที่สุดและหรูหราที่สุดของเรา สตูดิโอกว้างขวางพร้อมครัวขนาดเล็ก พื้นที่นั่งเล่น และระเบียงพร้อมวิวที่สวยงาม เหมาะสำหรับการพักระยะยาวหรือผู้ที่ต้องการพื้นที่และความสะดวกสบายเพิ่มเติม',
+          features: [
+            { icon: Bed, text: 'เตียงคิงไซส์' },
+            { icon: Users, text: 'แขก 2-4 คน' },
+            { icon: ChefHat, text: 'ครัวขนาดเล็กเต็มรูปแบบ' },
+            { icon: Wind, text: 'เครื่องปรับอากาศ' },
+            { icon: Wifi, text: 'Wi-Fi ฟรี' },
+            { icon: Eye, text: 'ระเบียงวิวเขา' }
+          ],
+          amenities: [
+            'เลย์เอาต์สตูดิโอกว้างขวาง (45 ตร.ม.)',
+            'เตียงคิงไซส์พร้อมผ้าปูคุณภาพพรีเมียม',
+            'ครัวขนาดเล็กเต็มรูปแบบพร้อมตู้เย็น',
+            'พื้นที่นั่งเล่นที่สะดวกสบายพร้อมโซฟา',
+            'ระเบียงส่วนตัวพร้อมวิวเนินเขา',
+            'ห้องน้ำในตัวทันสมัย',
+            'เครื่องปรับอากาศทั่วห้อง',
+            'Wi-Fi ความเร็วสูงฟรี',
+            'ทีวีจอแบนพร้อมเคเบิล',
+            'พื้นที่รับประทานอาหารพร้อมเก้าอี้บาร์',
+            'ไมโครเวฟและอุปกรณ์ทำอาหาร',
+            'อุปกรณ์ชงกาแฟ/ชา',
+            'ไดร์เป่าผมและอุปกรณ์อาบน้ำ',
+            'ตู้นิรภัย',
+            'พื้นที่โต๊ะทำงาน',
+            'พื้นที่จัดเก็บของมากมาย'
+          ],
+          popular: true,
+          featured: true,
+          gallery: [suiteMain, suiteLiving, suiteBalcony, suiteBathroom]
+        },
         {
           id: 'deluxe',
           name: 'ห้องดีลักซ์',
@@ -119,7 +199,8 @@ const Rooms = ({ language }: RoomsProps) => {
             'ไดร์เป่าผม',
             'ตู้นิรภัย'
           ],
-          popular: true
+          popular: false,
+          featured: false
         },
         {
           id: 'standard',
@@ -148,7 +229,8 @@ const Rooms = ({ language }: RoomsProps) => {
             'โต๊ะทำงาน',
             'ตู้เสื้อผ้า'
           ],
-          popular: false
+          popular: false,
+          featured: false
         }
       ],
       bookNow: 'จองเลย',

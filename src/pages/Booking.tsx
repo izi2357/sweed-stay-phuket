@@ -50,6 +50,7 @@ const Booking = ({ language }: BookingProps) => {
       },
       rooms: {
         select: 'Select a room type',
+        premium: 'Premium Studio Suite (฿3,500/night)',
         deluxe: 'Deluxe Room (฿2,500/night)',
         standard: 'Standard Room (฿1,800/night)'
       },
@@ -107,6 +108,7 @@ const Booking = ({ language }: BookingProps) => {
       },
       rooms: {
         select: 'เลือกประเภทห้อง',
+        premium: 'สวีทพรีเมียมสตูดิโอ (฿3,500/คืน)',
         deluxe: 'ห้องดีลักซ์ (฿2,500/คืน)',
         standard: 'ห้องมาตรฐาน (฿1,800/คืน)'
       },
@@ -320,6 +322,7 @@ const Booking = ({ language }: BookingProps) => {
                             <SelectValue placeholder={t.rooms.select} />
                           </SelectTrigger>
                           <SelectContent>
+                            <SelectItem value="premium">{t.rooms.premium}</SelectItem>
                             <SelectItem value="deluxe">{t.rooms.deluxe}</SelectItem>
                             <SelectItem value="standard">{t.rooms.standard}</SelectItem>
                           </SelectContent>
