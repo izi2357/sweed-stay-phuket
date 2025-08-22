@@ -61,7 +61,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Sweed Stay custom colors
+				wood: {
+					light: 'hsl(var(--wood-light))',
+					medium: 'hsl(var(--wood-medium))',
+					dark: 'hsl(var(--wood-dark))'
+				},
+				sage: {
+					DEFAULT: 'hsl(var(--sage))',
+					dark: 'hsl(var(--sage-dark))'
+				},
+				coral: {
+					warm: 'hsl(var(--coral-warm))'
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				display: ['Cal Sans', 'Inter', 'system-ui', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
