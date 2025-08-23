@@ -3,9 +3,11 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Wifi, Car, Coffee, MapPin, Users, Bed, Bath, Wind, ChefHat, Tv, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import roomDeluxe from '@/assets/room-deluxe.jpg';
 import roomStandard from '@/assets/room-standard.jpg';
 import { Language } from '@/hooks/useLanguage';
+import RoomGallery from '@/components/RoomGallery';
 
 interface RoomsProps {
   language: Language;
@@ -284,89 +286,12 @@ const Rooms = ({ language }: RoomsProps) => {
             <Card key={room.id} className="overflow-hidden shadow-medium">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Image Gallery */}
-                <div className="relative h-64 lg:h-auto">
-                  {room.gallery && room.gallery.length > 1 ? (
-                    <div className="relative h-full group">
-                      <div 
-                        id={`gallery-${room.id}`}
-                        className="flex h-full overflow-hidden"
-                        style={{ transform: 'translateX(0%)' }}
-                      >
-                        {room.gallery.map((image, index) => (
-                          <div key={index} className="flex-none w-full h-full">
-                            <img
-                              src={image}
-                              alt={`${room.name} - Image ${index + 1}`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                      
-                      {/* Navigation buttons */}
-                      <button
-                        onClick={() => {
-                          const gallery = document.getElementById(`gallery-${room.id}`);
-                          const currentTransform = gallery?.style.transform || 'translateX(0%)';
-                          const currentIndex = parseInt(currentTransform.match(/-?(\d+)/)?.[1] || '0') / 100;
-                          const newIndex = currentIndex > 0 ? currentIndex - 1 : room.gallery!.length - 1;
-                          gallery!.style.transform = `translateX(-${newIndex * 100}%)`;
-                          gallery!.style.transition = 'transform 0.3s ease-in-out';
-                        }}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70"
-                      >
-                        ‹
-                      </button>
-                      
-                      <button
-                        onClick={() => {
-                          const gallery = document.getElementById(`gallery-${room.id}`);
-                          const currentTransform = gallery?.style.transform || 'translateX(0%)';
-                          const currentIndex = parseInt(currentTransform.match(/-?(\d+)/)?.[1] || '0') / 100;
-                          const newIndex = currentIndex < room.gallery!.length - 1 ? currentIndex + 1 : 0;
-                          gallery!.style.transform = `translateX(-${newIndex * 100}%)`;
-                          gallery!.style.transition = 'transform 0.3s ease-in-out';
-                        }}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70"
-                      >
-                        ›
-                      </button>
-                      
-                      {/* Gallery indicators */}
-                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                        {room.gallery.map((_, index) => (
-                          <button
-                            key={index}
-                            onClick={() => {
-                              const gallery = document.getElementById(`gallery-${room.id}`);
-                              gallery!.style.transform = `translateX(-${index * 100}%)`;
-                              gallery!.style.transition = 'transform 0.3s ease-in-out';
-                            }}
-                            className="w-2 h-2 bg-white/60 rounded-full hover:bg-white/90 transition-colors"
-                          />
-                        ))}
-                      </div>
-                      
-                      {/* Navigation hint */}
-                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <div className="text-white/80 text-sm bg-black/50 px-3 py-1 rounded-full">
-                          {room.gallery.findIndex(() => true) + 1} / {room.gallery.length}
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <img
-                      src={room.image}
-                      alt={room.name}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                  {room.popular && (
-                    <Badge className="absolute top-4 left-4 bg-primary z-10">
-                      {language === 'en' ? 'Most Popular' : 'ยอดนิยม'}
-                    </Badge>
-                  )}
-                </div>
+                <RoomGallery 
+                  images={room.gallery || [room.image]}
+                  roomName={room.name}
+                  isPopular={room.popular}
+                  language={language}
+                />
 
                 {/* Content */}
                 <CardContent className="p-8">
