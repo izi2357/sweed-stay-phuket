@@ -3,10 +3,6 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Wifi, Car, Coffee, MapPin, Users, Bed, Bath, Wind, ChefHat, Tv, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import suiteMain from '@/assets/suite-main.jpg';
-import suiteLiving from '@/assets/suite-living.jpg';
-import suiteBalcony from '@/assets/suite-balcony.jpg';
-import suiteBathroom from '@/assets/suite-bathroom.jpg';
 import roomDeluxe from '@/assets/room-deluxe.jpg';
 import roomStandard from '@/assets/room-standard.jpg';
 import { Language } from '@/hooks/useLanguage';
@@ -26,7 +22,7 @@ const Rooms = ({ language }: RoomsProps) => {
           name: 'Premium Studio Suite',
           price: '฿3,500',
           priceNote: 'per night',
-          image: suiteMain,
+          image: '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
           description: 'Our largest and most luxurious accommodation. Spacious studio with kitchenette, living area, and stunning balcony views. Perfect for extended stays or those wanting extra space and comfort.',
           features: [
             { icon: Bed, text: 'King Size Bed' },
@@ -56,7 +52,17 @@ const Rooms = ({ language }: RoomsProps) => {
           ],
           popular: true,
           featured: true,
-          gallery: [suiteMain, suiteLiving, suiteBalcony, suiteBathroom]
+          gallery: [
+            '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
+            '/lovable-uploads/6166090c-9182-4704-964c-1e04e9903078.png',
+            '/lovable-uploads/6279a15d-74a0-49e2-b5f2-1aac10c0a877.png',
+            '/lovable-uploads/b615edff-6a15-459b-8d87-79accdb406f0.png',
+            '/lovable-uploads/19ecf6bc-3596-4c51-bf14-5e2d41329e6d.png',
+            '/lovable-uploads/ef15cb6f-0ed4-47ba-8421-9eea76fa44c9.png',
+            '/lovable-uploads/225612aa-752c-4270-98a9-4b6394d74fdd.png',
+            '/lovable-uploads/c8dd8492-ed20-484a-b69e-485335e65249.png',
+            '/lovable-uploads/4c4fcf55-9067-4eff-b4e0-e3645d8a7187.png'
+          ]
         },
         {
           id: 'deluxe',
@@ -140,7 +146,7 @@ const Rooms = ({ language }: RoomsProps) => {
           name: 'สวีทพรีเมียมสตูดิโอ',
           price: '฿3,500',
           priceNote: 'ต่อคืน',
-          image: suiteMain,
+          image: '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
           description: 'ที่พักที่ใหญ่ที่สุดและหรูหราที่สุดของเรา สตูดิโอกว้างขวางพร้อมครัวขนาดเล็ก พื้นที่นั่งเล่น และระเบียงพร้อมวิวที่สวยงาม เหมาะสำหรับการพักระยะยาวหรือผู้ที่ต้องการพื้นที่และความสะดวกสบายเพิ่มเติม',
           features: [
             { icon: Bed, text: 'เตียงคิงไซส์' },
@@ -170,7 +176,17 @@ const Rooms = ({ language }: RoomsProps) => {
           ],
           popular: true,
           featured: true,
-          gallery: [suiteMain, suiteLiving, suiteBalcony, suiteBathroom]
+          gallery: [
+            '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
+            '/lovable-uploads/6166090c-9182-4704-964c-1e04e9903078.png',
+            '/lovable-uploads/6279a15d-74a0-49e2-b5f2-1aac10c0a877.png',
+            '/lovable-uploads/b615edff-6a15-459b-8d87-79accdb406f0.png',
+            '/lovable-uploads/19ecf6bc-3596-4c51-bf14-5e2d41329e6d.png',
+            '/lovable-uploads/ef15cb6f-0ed4-47ba-8421-9eea76fa44c9.png',
+            '/lovable-uploads/225612aa-752c-4270-98a9-4b6394d74fdd.png',
+            '/lovable-uploads/c8dd8492-ed20-484a-b69e-485335e65249.png',
+            '/lovable-uploads/4c4fcf55-9067-4eff-b4e0-e3645d8a7187.png'
+          ]
         },
         {
           id: 'deluxe',
@@ -271,9 +287,13 @@ const Rooms = ({ language }: RoomsProps) => {
                 <div className="relative h-64 lg:h-auto">
                   {room.gallery && room.gallery.length > 1 ? (
                     <div className="relative h-full group">
-                      <div className="flex overflow-x-auto scrollbar-hide h-full snap-x snap-mandatory">
+                      <div 
+                        id={`gallery-${room.id}`}
+                        className="flex h-full overflow-hidden"
+                        style={{ transform: 'translateX(0%)' }}
+                      >
                         {room.gallery.map((image, index) => (
-                          <div key={index} className="flex-none w-full h-full snap-start">
+                          <div key={index} className="flex-none w-full h-full">
                             <img
                               src={image}
                               alt={`${room.name} - Image ${index + 1}`}
@@ -282,16 +302,55 @@ const Rooms = ({ language }: RoomsProps) => {
                           </div>
                         ))}
                       </div>
+                      
+                      {/* Navigation buttons */}
+                      <button
+                        onClick={() => {
+                          const gallery = document.getElementById(`gallery-${room.id}`);
+                          const currentTransform = gallery?.style.transform || 'translateX(0%)';
+                          const currentIndex = parseInt(currentTransform.match(/-?(\d+)/)?.[1] || '0') / 100;
+                          const newIndex = currentIndex > 0 ? currentIndex - 1 : room.gallery!.length - 1;
+                          gallery!.style.transform = `translateX(-${newIndex * 100}%)`;
+                          gallery!.style.transition = 'transform 0.3s ease-in-out';
+                        }}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70"
+                      >
+                        ‹
+                      </button>
+                      
+                      <button
+                        onClick={() => {
+                          const gallery = document.getElementById(`gallery-${room.id}`);
+                          const currentTransform = gallery?.style.transform || 'translateX(0%)';
+                          const currentIndex = parseInt(currentTransform.match(/-?(\d+)/)?.[1] || '0') / 100;
+                          const newIndex = currentIndex < room.gallery!.length - 1 ? currentIndex + 1 : 0;
+                          gallery!.style.transform = `translateX(-${newIndex * 100}%)`;
+                          gallery!.style.transition = 'transform 0.3s ease-in-out';
+                        }}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70"
+                      >
+                        ›
+                      </button>
+                      
                       {/* Gallery indicators */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                         {room.gallery.map((_, index) => (
-                          <div key={index} className="w-2 h-2 bg-white/60 rounded-full" />
+                          <button
+                            key={index}
+                            onClick={() => {
+                              const gallery = document.getElementById(`gallery-${room.id}`);
+                              gallery!.style.transform = `translateX(-${index * 100}%)`;
+                              gallery!.style.transition = 'transform 0.3s ease-in-out';
+                            }}
+                            className="w-2 h-2 bg-white/60 rounded-full hover:bg-white/90 transition-colors"
+                          />
                         ))}
                       </div>
+                      
                       {/* Navigation hint */}
-                      <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <div className="text-white/80 text-sm bg-black/20 px-2 py-1 rounded">
-                          {language === 'en' ? 'Swipe to see more' : 'เลื่อนเพื่อดูเพิ่มเติม'}
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="text-white/80 text-sm bg-black/50 px-3 py-1 rounded-full">
+                          {room.gallery.findIndex(() => true) + 1} / {room.gallery.length}
                         </div>
                       </div>
                     </div>
@@ -303,7 +362,7 @@ const Rooms = ({ language }: RoomsProps) => {
                     />
                   )}
                   {room.popular && (
-                    <Badge className="absolute top-4 left-4 bg-primary">
+                    <Badge className="absolute top-4 left-4 bg-primary z-10">
                       {language === 'en' ? 'Most Popular' : 'ยอดนิยม'}
                     </Badge>
                   )}
