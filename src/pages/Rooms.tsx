@@ -267,13 +267,41 @@ const Rooms = ({ language }: RoomsProps) => {
           {t.rooms.map((room) => (
             <Card key={room.id} className="overflow-hidden shadow-medium">
               <div className="grid grid-cols-1 lg:grid-cols-2">
-                {/* Image */}
+                {/* Image Gallery */}
                 <div className="relative h-64 lg:h-auto">
-                  <img
-                    src={room.image}
-                    alt={room.name}
-                    className="w-full h-full object-cover"
-                  />
+                  {room.gallery && room.gallery.length > 1 ? (
+                    <div className="relative h-full group">
+                      <div className="flex overflow-x-auto scrollbar-hide h-full snap-x snap-mandatory">
+                        {room.gallery.map((image, index) => (
+                          <div key={index} className="flex-none w-full h-full snap-start">
+                            <img
+                              src={image}
+                              alt={`${room.name} - Image ${index + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      {/* Gallery indicators */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {room.gallery.map((_, index) => (
+                          <div key={index} className="w-2 h-2 bg-white/60 rounded-full" />
+                        ))}
+                      </div>
+                      {/* Navigation hint */}
+                      <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="text-white/80 text-sm bg-black/20 px-2 py-1 rounded">
+                          {language === 'en' ? 'Swipe to see more' : 'เลื่อนเพื่อดูเพิ่มเติม'}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <img
+                      src={room.image}
+                      alt={room.name}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                   {room.popular && (
                     <Badge className="absolute top-4 left-4 bg-primary">
                       {language === 'en' ? 'Most Popular' : 'ยอดนิยม'}
