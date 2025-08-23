@@ -12,39 +12,39 @@ const About = ({ language }: AboutProps) => {
   const content = {
     en: {
       title: 'About Sweed Stay',
-      subtitle: 'Where Scandinavian design meets Thai hospitality',
+      subtitle: 'Premium accommodation near Nai Harn Beach, Phuket',
       story: {
         title: 'Our Story',
         content: [
-          'Sweed Stay was born from a simple vision: to create a unique accommodation experience that combines the best of two worlds. Our founders, inspired by their travels through Scandinavia and their love for Thailand, wanted to bring the clean, minimalist aesthetic of Nordic design to the tropical paradise of Phuket.',
-          'What started as a dream has become a reality - a place where guests can experience the serene beauty of Scandinavian design while enjoying the warm hospitality that Thailand is famous for. Every detail, from our carefully chosen furniture to our color palette, reflects this harmonious blend.',
-          'We believe that travel is about more than just a place to sleep. It\'s about creating memories, finding peace, and discovering new perspectives. That\'s why we\'ve crafted each room to be a sanctuary - a space where you can unwind, recharge, and connect with the beauty around you.'
+          'Sweed Stay was born from a simple vision: to create exceptional accommodation in one of Phuket\'s most beautiful locations. Situated near the pristine Nai Harn Beach, we offer our guests a perfect blend of comfort, quality, and convenience.',
+          'What started as a dream has become a reality - a place where guests can experience modern comfort while being perfectly positioned to explore the best of Phuket. Every detail, from our carefully chosen furnishings to our thoughtful amenities, reflects our commitment to providing an outstanding stay.',
+          'We believe that accommodation is about more than just a place to sleep. It\'s about creating memories, finding relaxation, and having the perfect base for your Phuket adventure. That\'s why we\'ve crafted each room to be comfortable, clean, and welcoming - a space where you can unwind and prepare for your next discovery.'
         ]
       },
-      inspiration: {
-        title: 'Scandinavian Inspiration',
-        content: 'Our design philosophy is rooted in the Scandinavian principles of hygge - the art of creating atmosphere and enjoying life\'s simple pleasures. We\'ve carefully curated each space to embody these values: clean lines, natural materials, neutral colors, and an emphasis on functionality without sacrificing beauty.',
+      location: {
+        title: 'Prime Location',
+        content: 'Located near the beautiful Nai Harn Beach, Sweed Stay offers easy access to one of Phuket\'s most scenic and peaceful beaches. You\'re perfectly positioned to enjoy both the tranquil beach life and Phuket\'s vibrant attractions.',
         features: [
           {
             icon: Home,
-            title: 'Minimalist Design',
-            description: 'Clean lines and uncluttered spaces that promote tranquility and peace of mind.'
+            title: 'Modern Comfort',
+            description: 'Clean, contemporary rooms designed for your comfort and relaxation.'
           },
           {
             icon: Leaf,
-            title: 'Natural Materials',
-            description: 'Sustainable wood, organic textiles, and natural stone create a connection with nature.'
+            title: 'Premium Location',
+            description: 'Near Nai Harn Beach in one of Phuket\'s most desirable areas.'
           },
           {
             icon: Heart,
-            title: 'Hygge Atmosphere',
-            description: 'Cozy, comfortable spaces designed to make you feel at home and promote wellbeing.'
+            title: 'Quality Service',
+            description: 'Attentive service focused on making your stay memorable and comfortable.'
           }
         ]
       },
       hospitality: {
         title: 'Thai Hospitality',
-        content: 'While our design is inspired by Scandinavia, our service is unmistakably Thai. We believe in the concept of "jai yen" - keeping a cool heart - and "sanuk" - finding joy in what you do. Our team is dedicated to ensuring your stay is not just comfortable, but truly memorable.',
+        content: 'Our service embodies authentic Thai hospitality. We believe in the concept of "jai yen" - keeping a cool heart - and "sanuk" - finding joy in what you do. Our team is dedicated to ensuring your stay is not just comfortable, but truly memorable.',
         values: [
           'Genuine warmth and friendliness',
           'Attention to detail in service',
@@ -81,39 +81,39 @@ const About = ({ language }: AboutProps) => {
     },
     th: {
       title: 'เกี่ยวกับ Sweed Stay',
-      subtitle: 'ที่ซึ่งการออกแบบแบบสแกนดิเนเวียผสานกับการต้อนรับแบบไทย',
+      subtitle: 'ที่พักพรีเมียมใกล้หาดในหาน ภูเก็ต',
       story: {
         title: 'เรื่องราวของเรา',
         content: [
-          'Sweed Stay เกิดขึ้นจากวิสัยทัศน์ที่เรียบง่าย: เพื่อสร้างประสบการณ์ที่พักที่เป็นเอกลักษณ์ที่ผสมผสานสิ่งที่ดีที่สุดของสองโลก ผู้ก่อตั้งของเรา ซึ่งได้รับแรงบันดาลใจจากการเดินทางผ่านประเทศสแกนดิเนเวียและความรักในประเทศไทย ต้องการนำสุนทรียศาสตร์ที่สะอาดและเรียบง่ายของการออกแบบนอร์ดิกมาสู่สวรรค์เมืองร้อนของภูเก็ต',
-          'สิ่งที่เริ่มต้นเป็นความฝันได้กลายเป็นความจริง - สถานที่ที่แขกสามารถสัมผัสความงามอันเงียบสงบของการออกแบบแบบสแกนดิเนเวียในขณะที่เพลิดเพลินกับการต้อนรับที่อบอุ่นซึ่งประเทศไทยมีชื่อเสียง รายละเอียดทุกอย่าง ตั้งแต่เฟอร์นิเจอร์ที่เลือกสรรอย่างรอบคอบไปจนถึงจานสีของเรา สะท้อนถึงการผสมผสานที่กลมกลืนนี้',
-          'เราเชื่อว่าการเดินทางมีความหมายมากกว่าแค่สถานที่นอน มันเกี่ยวกับการสร้างความทรงจำ การค้นหาความสงบ และการค้นพบมุมมองใหม่ นั่นคือเหตุผลที่เราได้สร้างสรรค์แต่ละห้องให้เป็นสถานที่ศักดิ์สิทธิ์ - พื้นที่ที่คุณสามารถผ่อนคลาย เติมพลัง และเชื่อมต่อกับความงามรอบตัวคุณ'
+          'Sweed Stay เกิดขึ้นจากวิสัยทัศน์ที่เรียบง่าย: เพื่อสร้างที่พักที่ยอดเยี่ยมในหนึ่งในทำเลที่สวยงามที่สุดของภูเก็ต ตั้งอยู่ใกล้หาดในหานที่บริสุทธิ์ เราเสนอให้แขกของเราการผสมผสานที่สมบูรณ์แบบของความสะดวกสบาย คุณภาพ และความสะดวก',
+          'สิ่งที่เริ่มต้นเป็นความฝันได้กลายเป็นความจริง - สถานที่ที่แขกสามารถสัมผัสความสะดวกสบายสมัยใหม่ในขณะที่อยู่ในตำแหน่งที่สมบูรณ์แบบในการสำรวจสิ่งที่ดีที่สุดของภูเก็ต รายละเอียดทุกอย่าง ตั้งแต่เฟอร์นิเจอร์ที่เลือกสรรอย่างรอบคอบไปจนถึงสิ่งอำนวยความสะดวกที่รอบคอบ สะท้อนถึงความมุ่งมั่นของเราในการให้การเข้าพักที่โดดเด่น',
+          'เราเชื่อว่าที่พักมีความหมายมากกว่าแค่สถานที่นอน มันเกี่ยวกับการสร้างความทรงจำ การค้นหาการผ่อนคลาย และการมีฐานที่สมบูรณ์แบบสำหรับการผจญภัยภูเก็ตของคุณ นั่นคือเหตุผลที่เราได้สร้างสรรค์แต่ละห้องให้สะดวกสบาย สะอาด และเป็นมิตร - พื้นที่ที่คุณสามารถผ่อนคลายและเตรียมตัวสำหรับการค้นพบครั้งต่อไป'
         ]
       },
-      inspiration: {
-        title: 'แรงบันดาลใจแบบสแกนดิเนเวีย',
-        content: 'ปรัชญาการออกแบบของเรามีรากฐานมาจากหลักการสแกนดิเนเวียของ hygge - ศิลปะแห่งการสร้างบรรยากาศและการเพลิดเพลินกับความสุขง่ายๆ ของชีวิต เราได้คัดสรรแต่ละพื้นที่อย่างรอบคอบเพื่อรวบรวมค่านิยมเหล่านี้: เส้นสายที่สะอาด วัสดุธรรมชาติ สีที่เป็นกลาง และการเน้นฟังก์ชันการใช้งานโดยไม่สูญเสียความงาม',
+      location: {
+        title: 'ทำเลยอดเยี่ยม',
+        content: 'ตั้งอยู่ใกล้หาดในหานที่สวยงาม Sweed Stay ให้การเข้าถึงที่ง่ายดายไปยังหนึ่งในหาดที่งดงามและเงียบสงบที่สุดของภูเก็ต คุณอยู่ในตำแหน่งที่สมบูรณ์แบบในการเพลิดเพลินกับทั้งชีวิตชายหาดที่เงียบสงบและสถานที่ท่องเที่ยวที่มีชีวิตชีวาของภูเก็ต',
         features: [
           {
             icon: Home,
-            title: 'การออกแบบมินิมัลลิสต์',
-            description: 'เส้นสายที่สะอาดและพื้นที่ที่ไม่รกรุงรังที่ส่งเสริมความเงียบสงบและความสงบใจ'
+            title: 'ความสะดวกสบายสมัยใหม่',
+            description: 'ห้องพักร่วมสมัยที่สะอาดออกแบบมาเพื่อความสะดวกสบายและการผ่อนคลายของคุณ'
           },
           {
             icon: Leaf,
-            title: 'วัสดุธรรมชาติ',
-            description: 'ไม้ที่ยั่งยืน สิ่งทอธรรมชาติ และหินธรรมชาติที่สร้างการเชื่อมต่อกับธรรมชาติ'
+            title: 'ทำเลพรีเมียม',
+            description: 'ใกล้หาดในหานในหนึ่งในพื้นที่ที่น่าปรารถนาที่สุดของภูเก็ต'
           },
           {
             icon: Heart,
-            title: 'บรรยากาศ Hygge',
-            description: 'พื้นที่ที่อบอุ่นและสะดวกสบายที่ออกแบบมาเพื่อให้คุณรู้สึกเหมือนอยู่บ้านและส่งเสริมความเป็นอยู่ที่ดี'
+            title: 'บริการคุณภาพ',
+            description: 'บริการที่ใส่ใจเน้นการทำให้การเข้าพักของคุณน่าจดจำและสะดวกสบาย'
           }
         ]
       },
       hospitality: {
         title: 'การต้อนรับแบบไทย',
-        content: 'แม้ว่าการออกแบบของเราจะได้รับแรงบันดาลใจจากสแกนดิเนเวีย แต่การบริการของเราเป็นแบบไทยอย่างแท้จริง เราเชื่อในแนวคิดของ "ใจเย็น" และ "สนุก" - การหาความสุขในสิ่งที่คุณทำ ทีมของเราทุ่มเทเพื่อให้แน่ใจว่าการเข้าพักของคุณไม่เพียงแต่สะดวกสบาย แต่น่าจดจำอย่างแท้จริง',
+        content: 'การบริการของเราประกอบด้วยการต้อนรับแบบไทยที่แท้จริง เราเชื่อในแนวคิดของ "ใจเย็น" และ "สนุก" - การหาความสุขในสิ่งที่คุณทำ ทีมของเราทุ่มเทเพื่อให้แน่ใจว่าการเข้าพักของคุณไม่เพียงแต่สะดวกสบาย แต่น่าจดจำอย่างแท้จริง',
         values: [
           'ความอบอุ่นและมิตรภาพที่แท้จริง',
           'ความใส่ใจในรายละเอียดของการบริการ',
@@ -190,19 +190,19 @@ const About = ({ language }: AboutProps) => {
           </div>
         </section>
 
-        {/* Scandinavian Inspiration */}
+        {/* Location Section */}
         <section className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display font-bold text-primary mb-6">
-              {t.inspiration.title}
+              {t.location.title}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              {t.inspiration.content}
+              {t.location.content}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.inspiration.features.map((feature, index) => (
+            {t.location.features.map((feature, index) => (
               <Card key={index} className="text-center p-6 hover-lift">
                 <CardContent className="p-0">
                   <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />

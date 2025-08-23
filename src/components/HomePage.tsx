@@ -18,13 +18,13 @@ const HomePage = ({ language }: HomePageProps) => {
   const content = {
     en: {
       hero: {
-        title: 'Experience Scandinavian Comfort in Tropical Phuket',
-        subtitle: 'Where Nordic minimalism meets Thai warmth. Discover your perfect home away from home.',
+        title: 'Premium Accommodation in Beautiful Phuket',
+        subtitle: 'Discover your perfect retreat near Nai Harn Beach. Modern comfort meets tropical paradise.',
         cta: 'Book Your Stay'
       },
       about: {
         title: 'Welcome to Sweed Stay',
-        description: 'We blend the clean, minimalist aesthetic of Scandinavian design with the warm hospitality that Thailand is famous for. Our thoughtfully designed rooms offer a serene retreat in the vibrant heart of Phuket.'
+        description: 'We offer thoughtfully designed, modern rooms in a premium location near Nai Harn Beach. Our comfortable accommodations provide a perfect base for exploring the best of Phuket while enjoying quality service and amenities.'
       },
       rooms: {
         title: 'Our Beautiful Rooms',
@@ -50,7 +50,7 @@ const HomePage = ({ language }: HomePageProps) => {
           { icon: Wifi, title: 'Free Wi-Fi', description: 'High-speed internet throughout the property' },
           { icon: Car, title: 'Free Parking', description: 'Secure parking available for all guests' },
           { icon: Coffee, title: 'Daily Breakfast', description: 'Fresh Thai and international breakfast' },
-          { icon: MapPin, title: 'Great Location', description: 'Walking distance to beaches and attractions' }
+          { icon: MapPin, title: 'Great Location', description: 'Near Nai Harn Beach and popular attractions' }
         ]
       },
       testimonials: {
@@ -63,7 +63,7 @@ const HomePage = ({ language }: HomePageProps) => {
           },
           {
             name: 'Michael Chen',
-            text: 'Beautiful Scandinavian design with Thai touches. Great location and excellent value for money.',
+            text: 'Beautiful modern rooms in a great location near Nai Harn Beach. Excellent value and friendly service.',
             rating: 5
           }
         ]
@@ -71,13 +71,13 @@ const HomePage = ({ language }: HomePageProps) => {
     },
     th: {
       hero: {
-        title: 'สัมผัสความสะดวกสบายแบบสแกนดิเนเวียในภูเก็ตเมืองร้อน',
-        subtitle: 'ที่ซึ่งมินิมัลลิสต์แบบนอร์ดิกผสานกับความอบอุ่นแบบไทย ค้นพบบ้านที่สมบูรณ์แบบของคุณ',
+        title: 'ที่พักพรีเมียมในภูเก็ตที่สวยงาม',
+        subtitle: 'ค้นพบที่พักผ่อนที่สมบูรณ์แบบใกล้หาดในหาน ความสะดวกสบายสมัยใหม่ผสานสวรรค์เมืองร้อน',
         cta: 'จองห้องพัก'
       },
       about: {
         title: 'ยินดีต้อนรับสู่ Sweed Stay',
-        description: 'เราผสมผสานความสวยงามที่สะอาดและเรียบง่ายของการออกแบบแบบสแกนดิเนเวียเข้ากับการต้อนรับที่อบอุ่นซึ่งประเทศไทยมีชื่อเสียง ห้องพักที่ออกแบบอย่างรอบคอบของเราเสนอที่พักผ่อนที่เงียบสงบในใจกลางเมืองภูเก็ตที่มีชีวิตชีวา'
+        description: 'เราเสนอห้องพักสมัยใหม่ที่ออกแบบอย่างรอบคอบในทำเลพรีเมียมใกล้หาดในหาน ที่พักที่สะดวกสบายของเราเป็นฐานที่สมบูรณ์แบบสำหรับการสำรวจภูเก็ตที่ดีที่สุดพร้อมบริการและสิ่งอำนวยความสะดวกคุณภาพ'
       },
       rooms: {
         title: 'ห้องพักสวยงามของเรา',
@@ -103,7 +103,7 @@ const HomePage = ({ language }: HomePageProps) => {
           { icon: Wifi, title: 'Wi-Fi ฟรี', description: 'อินเทอร์เน็ตความเร็วสูงทั่วทั้งอาคาร' },
           { icon: Car, title: 'ที่จอดรถฟรี', description: 'ที่จอดรถปลอดภัยสำหรับแขกทุกท่าน' },
           { icon: Coffee, title: 'อาหารเช้าประจำวัน', description: 'อาหารเช้าไทยและนานาชาติสดใหม่' },
-          { icon: MapPin, title: 'ทำเลดีเยี่ยม', description: 'เดินไปชายหาดและสถานที่ท่องเที่ยวได้' }
+          { icon: MapPin, title: 'ทำเลดีเยี่ยม', description: 'ใกล้หาดในหานและสถานที่ท่องเที่ยวยอดนิยม' }
         ]
       },
       testimonials: {
@@ -116,7 +116,7 @@ const HomePage = ({ language }: HomePageProps) => {
           },
           {
             name: 'Michael Chen',
-            text: 'การออกแบบแบบสแกนดิเนเวียที่สวยงามพร้อมสัมผัสไทย ทำเลดีและคุ้มค่าเงินเยี่ยม',
+            text: 'ห้องพักสมัยใหม่ที่สวยงามในทำเลดีใกล้หาดในหาน บริการดีเยี่ยมและคุ้มค่า',
             rating: 5
           }
         ]
@@ -347,8 +347,8 @@ const HomePage = ({ language }: HomePageProps) => {
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
             {language === 'en'
-              ? 'Book your perfect room today and discover the perfect blend of Scandinavian comfort and Thai hospitality.'
-              : 'จองห้องที่สมบูรณ์แบบของคุณวันนี้และค้นพบการผสมผสานที่สมบูรณ์แบบของความสะดวกสบายแบบสแกนดิเนเวียและการต้อนรับแบบไทย'
+              ? 'Book your perfect room today and discover premium accommodation near Nai Harn Beach in the heart of Phuket.'
+              : 'จองห้องที่สมบูรณ์แบบของคุณวันนี้และค้นพบที่พักพรีเมียมใกล้หาดในหานในใจกลางภูเก็ต'
             }
           </p>
           <Link to="/booking">

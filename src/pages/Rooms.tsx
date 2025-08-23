@@ -17,7 +17,7 @@ const Rooms = ({ language }: RoomsProps) => {
   const content = {
     en: {
       title: 'Our Rooms',
-      subtitle: 'Choose from our carefully designed rooms, each featuring Scandinavian aesthetics and modern Thai comfort.',
+      subtitle: 'Choose from our carefully designed rooms, each featuring modern comfort and convenient amenities in our premium Phuket location.',
       rooms: [
         {
           id: 'premium-suite',
@@ -141,7 +141,7 @@ const Rooms = ({ language }: RoomsProps) => {
     },
     th: {
       title: 'ห้องพักของเรา',
-      subtitle: 'เลือกจากห้องพักที่ออกแบบอย่างรอบคอบ แต่ละห้องมีสุนทรียศาสตร์แบบสแกนดิเนเวียและความสะดวกสบายแบบไทยสมัยใหม่',
+      subtitle: 'เลือกจากห้องพักที่ออกแบบอย่างรอบคอบ แต่ละห้องมีความสะดวกสบายสมัยใหม่และสิ่งอำนวยความสะดวกที่สะดวกในทำเลพรีเมียมภูเก็ตของเรา',
       rooms: [
         {
           id: 'premium-suite',
