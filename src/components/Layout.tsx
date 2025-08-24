@@ -31,9 +31,9 @@ const Layout = ({ children, language, onLanguageChange }: LayoutProps) => {
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img 
-                src="/sweed stays logo.jpeg" 
+                src="/sweed stays new logo.jpeg" 
                 alt="Sweed Stay Logo" 
-                className="h-14 w-14 rounded-lg object-cover"
+                className="h-20 w-auto rounded-lg object-contain shadow-medium hover:shadow-strong transition-shadow duration-300"
               />
             </Link>
 
@@ -129,9 +129,9 @@ const Layout = ({ children, language, onLanguageChange }: LayoutProps) => {
             <div>
               <div className="flex justify-center mb-4">
                 <img 
-                  src="/sweed stays logo.jpeg" 
+                  src="/sweed stays new logo.jpeg" 
                   alt="Sweed Stay Logo" 
-                  className="h-20 w-20 rounded-lg object-cover"
+                  className="h-24 w-auto rounded-lg object-contain shadow-medium"
                 />
               </div>
             </div>

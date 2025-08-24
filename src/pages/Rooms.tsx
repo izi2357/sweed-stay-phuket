@@ -12,6 +12,15 @@ interface RoomsProps {
 }
 
 const Rooms = ({ language }: RoomsProps) => {
+  const [expandedAmenities, setExpandedAmenities] = useState<{ [key: string]: boolean }>({});
+
+  const toggleAmenities = (roomId: string) => {
+    setExpandedAmenities(prev => ({
+      ...prev,
+      [roomId]: !prev[roomId]
+    }));
+  };
+
   const content = {
     en: {
       title: 'Our Rooms',
@@ -20,9 +29,12 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'premium-suite',
           name: 'Premium Studio Suite',
-          price: '฿1,500',
-          priceNote: 'per night',
-          image: '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
+          price: '฿1,100',
+          priceNote: 'per day',
+          monthlyDiscount: '15% off for monthly bookings',
+          deposit: '฿2,000',
+          depositNote: 'refundable on checkout',
+          image: '/main bed pic (2).png',
           description: 'Our largest and most luxurious accommodation. Spacious studio with living area and stunning hills view through a big full-size window from top to bottom. Perfect for extended stays or those wanting extra space and comfort.',
           features: [
             { icon: Bed, text: 'King Size Bed' },
@@ -36,7 +48,7 @@ const Rooms = ({ language }: RoomsProps) => {
             'King size bed with premium linens',
             'Comfortable living area with sofa',
             'Big full-size window from top to bottom with hills view',
-            'Modern ensuite bathroom',
+            'Modern ensuite bathroom with hot shower',
             'Air conditioning throughout',
             'Free high-speed Wi-Fi',
             'Flat-screen TV with cable',
@@ -45,11 +57,16 @@ const Rooms = ({ language }: RoomsProps) => {
             'Hair dryer and toiletries',
             'Safe deposit box',
             'Work desk area',
-            'Ample storage space'
+            'Ample storage space',
+            'Mini refrigerator',
+            'Microwave oven',
+            'Electric kettle',
+            'Kitchen utensils'
           ],
           popular: true,
           featured: true,
           gallery: [
+            '/main bed pic (2).png',
             '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
             '/lovable-uploads/6166090c-9182-4704-964c-1e04e9903078.png',
             '/lovable-uploads/6279a15d-74a0-49e2-b5f2-1aac10c0a877.png',
@@ -64,8 +81,11 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'deluxe',
           name: 'Deluxe Room',
-          price: '฿1,300',
-          priceNote: 'per night',
+          price: '฿1,000',
+          priceNote: 'per day',
+          monthlyDiscount: '15% off for monthly bookings',
+          deposit: '฿2,000',
+          depositNote: 'refundable on checkout',
           image: '/rooms pictures/2ndbig.JPG',
           description: 'Spacious room with modern amenities and private balcony. Perfect for couples or small families seeking comfort and style.',
           features: [
@@ -79,14 +99,17 @@ const Rooms = ({ language }: RoomsProps) => {
           amenities: [
             'King size bed with premium linens',
             'Private balcony with garden view',
-            'Modern ensuite bathroom',
+            'Modern ensuite bathroom with hot shower',
             'Air conditioning',
             'Free high-speed Wi-Fi',
             'Flat-screen TV',
             'Mini refrigerator',
             'Coffee/tea making facilities',
             'Hair dryer',
-            'Safe deposit box'
+            'Safe deposit box',
+            'Microwave oven',
+            'Electric kettle',
+            'Kitchen utensils'
           ],
           popular: false,
           featured: false,
@@ -105,8 +128,11 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'standard',
           name: 'Standard Room',
-          price: '฿1,200',
-          priceNote: 'per night',
+          price: '฿650',
+          priceNote: 'per day',
+          monthlyDiscount: '15% off for monthly bookings',
+          deposit: '฿2,000',
+          depositNote: 'refundable on checkout',
           image: '/rooms pictures/2ndsmall (1).JPG',
           description: 'Cozy and comfortable room with all essential amenities and private balcony. Ideal for solo travelers or couples.',
           features: [
@@ -121,7 +147,7 @@ const Rooms = ({ language }: RoomsProps) => {
           amenities: [
             'Comfortable double bed',
             'Private balcony',
-            'Modern ensuite bathroom',
+            'Modern ensuite bathroom with hot shower',
             'Air conditioning',
             'Free high-speed Wi-Fi',
             'Flat-screen TV',
@@ -129,7 +155,10 @@ const Rooms = ({ language }: RoomsProps) => {
             'Hair dryer',
             'Safe deposit box',
             'Work desk',
-            'Wardrobe'
+            'Wardrobe',
+            'Mini refrigerator',
+            'Microwave oven',
+            'Electric kettle'
           ],
           popular: false,
           featured: false,
@@ -169,9 +198,12 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'premium-suite',
           name: 'สวีทพรีเมียมสตูดิโอ',
-          price: '฿1,500',
-          priceNote: 'ต่อคืน',
-          image: '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
+                      price: '฿1,100',
+            priceNote: 'ต่อวัน',
+            monthlyDiscount: 'ลด 15% สำหรับการจองรายเดือน',
+            deposit: '฿2,000',
+            depositNote: 'คืนเงินหลังจบการจอง',
+          image: '/main bed pic (2).png',
           description: 'ที่พักที่ใหญ่ที่สุดและหรูหราที่สุดของเรา สตูดิโอกว้างขวางพร้อมพื้นที่นั่งเล่น และวิวเขาแสนสวยผ่านหน้าต่างขนาดใหญ่จากบนลงล่าง เหมาะสำหรับการพักระยะยาวหรือผู้ที่ต้องการพื้นที่และความสะดวกสบายเพิ่มเติม',
           features: [
             { icon: Bed, text: 'เตียงคิงไซส์' },
@@ -185,7 +217,7 @@ const Rooms = ({ language }: RoomsProps) => {
             'เตียงคิงไซส์พร้อมผ้าปูคุณภาพพรีเมียม',
             'พื้นที่นั่งเล่นที่สะดวกสบายพร้อมโซฟา',
             'หน้าต่างขนาดใหญ่จากบนลงล่างพร้อมวิวเขา',
-            'ห้องน้ำในตัวทันสมัย',
+            'ห้องน้ำในตัวทันสมัยพร้อมฝักบัวน้ำร้อน',
             'เครื่องปรับอากาศทั่วห้อง',
             'Wi-Fi ความเร็วสูงฟรี',
             'ทีวีจอแบนพร้อมเคเบิล',
@@ -194,11 +226,16 @@ const Rooms = ({ language }: RoomsProps) => {
             'ไดร์เป่าผมและอุปกรณ์อาบน้ำ',
             'ตู้นิรภัย',
             'พื้นที่โต๊ะทำงาน',
-            'พื้นที่จัดเก็บของมากมาย'
+            'พื้นที่จัดเก็บของมากมาย',
+            'ตู้เย็นขนาดเล็ก',
+            'เตาไมโครเวฟ',
+            'กาต้มน้ำไฟฟ้า',
+            'เครื่องครัว'
           ],
           popular: true,
           featured: true,
           gallery: [
+            '/main bed pic (2).png',
             '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
             '/lovable-uploads/6166090c-9182-4704-964c-1e04e9903078.png',
             '/lovable-uploads/6279a15d-74a0-49e2-b5f2-1aac10c0a877.png',
@@ -213,8 +250,11 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'deluxe',
           name: 'ห้องดีลักซ์',
-          price: '฿1,300',
-          priceNote: 'ต่อคืน',
+                      price: '฿1,000',
+            priceNote: 'ต่อวัน',
+            monthlyDiscount: 'ลด 15% สำหรับการจองรายเดือน',
+            deposit: '฿2,000',
+            depositNote: 'คืนเงินหลังจบการจอง',
           image: '/rooms pictures/2ndbig.JPG',
           description: 'ห้องกว้างขวางพร้อมสิ่งอำนวยความสะดวกทันสมัย ระเบียงส่วนตัว และวิวที่สวยงาม เหมาะสำหรับคู่รักหรือครอบครวัวเล็ก',
           features: [
@@ -228,14 +268,17 @@ const Rooms = ({ language }: RoomsProps) => {
           amenities: [
             'เตียงคิงไซส์พร้อมผ้าปูคุณภาพพรีเมียม',
             'ระเบียงส่วนตัวพร้อมวิวสวน',
-            'ห้องน้ำในตัวทันสมัย',
+            'ห้องน้ำในตัวทันสมัยพร้อมฝักบัวน้ำร้อน',
             'เครื่องปรับอากาศ',
             'Wi-Fi ความเร็วสูงฟรี',
             'ทีวีจอแบน',
             'ตู้เย็นขนาดเล็ก',
             'อุปกรณ์ชงกาแฟ/ชา',
             'ไดร์เป่าผม',
-            'ตู้นิรภัย'
+            'ตู้นิรภัย',
+            'เตาไมโครเวฟ',
+            'กาต้มน้ำไฟฟ้า',
+            'เครื่องครัว'
           ],
           popular: false,
           featured: false,
@@ -254,8 +297,11 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'standard',
           name: 'ห้องมาตรฐาน',
-          price: '฿1,200',
-          priceNote: 'ต่อคืน',
+                      price: '฿650',
+            priceNote: 'ต่อวัน',
+            monthlyDiscount: 'ลด 15% สำหรับการจองรายเดือน',
+            deposit: '฿2,000',
+            depositNote: 'คืนเงินหลังจบการจอง',
           image: '/rooms pictures/2ndsmall (1).JPG',
           description: 'ห้องที่อบอุ่นและสะดวกสบายพร้อมสิ่งอำนวยความสะดวกที่จำเป็นและระเบียงส่วนตัว เหมาะสำหรับนักเดินทางคนเดียวหรือคู่รัก',
           features: [
@@ -270,7 +316,7 @@ const Rooms = ({ language }: RoomsProps) => {
           amenities: [
             'เตียงคู่ที่สะดวกสบาย',
             'ระเบียงส่วนตัว',
-            'ห้องน้ำในตัวทันสมัย',
+            'ห้องน้ำในตัวทันสมัยพร้อมฝักบัวน้ำร้อน',
             'เครื่องปรับอากาศ',
             'Wi-Fi ความเร็วสูงฟรี',
             'ทีวีจอแบน',
@@ -278,7 +324,10 @@ const Rooms = ({ language }: RoomsProps) => {
             'ไดร์เป่าผม',
             'ตู้นิรภัย',
             'โต๊ะทำงาน',
-            'ตู้เสื้อผ้า'
+            'ตู้เสื้อผ้า',
+            'ตู้เย็นขนาดเล็ก',
+            'เตาไมโครเวฟ',
+            'กาต้มน้ำไฟฟ้า'
           ],
           popular: false,
           featured: false,
@@ -322,9 +371,9 @@ const Rooms = ({ language }: RoomsProps) => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <img 
-              src="/sweed stays logo.jpeg" 
+              src="/sweed stays new logo.jpeg" 
               alt="Sweed Stay Logo" 
-              className="h-20 w-20 rounded-lg object-cover shadow-medium"
+              className="h-32 w-auto rounded-lg object-contain shadow-medium hover:shadow-strong transition-shadow duration-300"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
@@ -362,6 +411,12 @@ const Rooms = ({ language }: RoomsProps) => {
                         <div className="text-sm text-muted-foreground">
                           {room.priceNote}
                         </div>
+                        <div className="text-sm text-primary mt-1">
+                          {room.monthlyDiscount}
+                        </div>
+                        <div className="text-sm text-primary mt-2">
+                          {room.deposit} {room.depositNote}
+                        </div>
                       </div>
                     </div>
 
@@ -385,16 +440,24 @@ const Rooms = ({ language }: RoomsProps) => {
                         {t.amenitiesTitle}
                       </h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 text-sm text-muted-foreground">
-                        {room.amenities.slice(0, 6).map((amenity, index) => (
-                          <div key={index} className="flex items-center space-x-2">
-                            <div className="w-1 h-1 bg-primary rounded-full" />
-                            <span>{amenity}</span>
-                          </div>
-                        ))}
+                        {room.amenities
+                          .slice(0, expandedAmenities[room.id] ? room.amenities.length : 6)
+                          .map((amenity, index) => (
+                            <div key={index} className="flex items-center space-x-2">
+                              <div className="w-1 h-1 bg-primary rounded-full" />
+                              <span>{amenity}</span>
+                            </div>
+                          ))}
                       </div>
                       {room.amenities.length > 6 && (
-                        <button className="text-primary text-sm mt-2 hover:underline">
-                          {language === 'en' ? 'Show all amenities' : 'แสดงสิ่งอำนวยความสะดวกทั้งหมด'}
+                        <button 
+                          onClick={() => toggleAmenities(room.id)}
+                          className="text-primary text-sm mt-2 hover:underline"
+                        >
+                          {expandedAmenities[room.id] 
+                            ? (language === 'en' ? 'Show less' : 'แสดงน้อยลง')
+                            : (language === 'en' ? 'Show all amenities' : 'แสดงสิ่งอำนวยความสะดวกทั้งหมด')
+                          }
                         </button>
                       )}
                     </div>

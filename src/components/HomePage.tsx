@@ -27,17 +27,17 @@ const HomePage = ({ language }: HomePageProps) => {
         premium: {
           name: 'Premium Studio Suite',
           description: 'Our largest suite with living area and big full-size window with hills view',
-          price: '฿1,500/night'
+          price: '฿1,100/day'
         },
         deluxe: {
           name: 'Deluxe Room',
           description: 'Spacious room with modern amenities and private balcony',
-          price: '฿1,300/night'
+          price: '฿1,000/day'
         },
         standard: {
           name: 'Standard Room',
           description: 'Cozy room with private balcony perfect for solo travelers or couples',
-          price: '฿1,200/night'
+          price: '฿650/day'
         }
       },
       features: {
@@ -79,17 +79,17 @@ const HomePage = ({ language }: HomePageProps) => {
         premium: {
           name: 'สวีทพรีเมียมสตูดิโอ',
           description: 'สวีทที่ใหญ่ที่สุดพร้อมพื้นที่นั่งเล่นและหน้าต่างขนาดใหญ่วิวเขา',
-          price: '฿1,500/คืน'
+          price: '฿1,100/วัน'
         },
         deluxe: {
           name: 'ห้องดีลักซ์',
           description: 'ห้องกว้างขวางพร้อมสิ่งอำนวยความสะดวกทันสมัยและระเบียงส่วนตัว',
-          price: '฿1,300/คืน'
+          price: '฿1,000/วัน'
         },
         standard: {
           name: 'ห้องมาตรฐาน',
           description: 'ห้องอบอุ่นพร้อมระเบียงส่วนตัวเหมาะสำหรับนักเดินทางคนเดียวหรือคู่รัก',
-          price: '฿1,200/คืน'
+          price: '฿650/วัน'
         }
       },
       features: {
@@ -132,7 +132,7 @@ const HomePage = ({ language }: HomePageProps) => {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/sweed stays intro video.mp4" type="video/mp4" />
+            <source src="/8c07634412854678bf700a17a39d2255.mp4" type="video/mp4" />
             {/* Fallback image if video fails to load */}
             <img
               src={heroRoom}
@@ -144,13 +144,13 @@ const HomePage = ({ language }: HomePageProps) => {
         </div>
         
         <div className="relative z-10 text-center text-white/50 max-w-4xl mx-auto px-4 mt-20">
-          <div className="flex justify-center mb-6">
-            <img 
-              src="/sweed stays logo.jpeg" 
-              alt="Sweed Stay Logo" 
-              className="h-20 w-20 rounded-lg object-cover shadow-strong"
-            />
-          </div>
+                            <div className="flex justify-center mb-6">
+                    <img
+                      src="/sweed stays new logo.jpeg"
+                      alt="Sweed Stay Logo"
+                      className="h-32 w-auto rounded-lg object-contain shadow-strong opacity-50"
+                    />
+                  </div>
           <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight text-white/40">
             {t.hero.title}
           </h1>
@@ -186,7 +186,7 @@ const HomePage = ({ language }: HomePageProps) => {
             </div>
             <div className="relative">
               <img
-                src="/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png"
+                src="/main bed pic (2).png"
                 alt="Premium Studio Suite - Main Room"
                 className="rounded-lg shadow-strong w-full h-96 object-cover"
               />
@@ -206,7 +206,7 @@ const HomePage = ({ language }: HomePageProps) => {
             <Card className="overflow-hidden hover-lift">
               <div className="relative h-64">
                 <img
-                  src="/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png"
+                  src="/main bed pic (2).png"
                   alt="Premium Studio Suite"
                   className="w-full h-full object-cover"
                 />

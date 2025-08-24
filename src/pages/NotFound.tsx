@@ -16,9 +16,9 @@ const NotFound = () => {
       <div className="text-center max-w-md mx-auto px-4">
         <div className="flex justify-center mb-6">
           <img 
-            src="/sweed stays logo.jpeg" 
+            src="/sweed stays new logo.jpeg" 
             alt="Sweed Stay Logo" 
-            className="h-24 w-24 rounded-lg object-cover shadow-medium"
+            className="h-32 w-auto rounded-lg object-contain shadow-medium hover:shadow-strong transition-shadow duration-300"
           />
         </div>
         <h1 className="text-6xl font-display font-bold text-primary mb-4">404</h1>

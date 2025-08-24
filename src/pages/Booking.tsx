@@ -50,9 +50,9 @@ const Booking = ({ language }: BookingProps) => {
       },
       rooms: {
         select: 'Select a room type',
-        premium: 'Premium Studio Suite (฿3,500/night)',
-        deluxe: 'Deluxe Room (฿2,500/night)',
-        standard: 'Standard Room (฿1,800/night)'
+        premium: 'Premium Studio Suite (฿1,100/day)',
+        deluxe: 'Deluxe Room (฿1,000/day)',
+        standard: 'Standard Room (฿650/day)'
       },
       guestOptions: {
         '1': '1 Guest',
@@ -108,9 +108,9 @@ const Booking = ({ language }: BookingProps) => {
       },
       rooms: {
         select: 'เลือกประเภทห้อง',
-        premium: 'สวีทพรีเมียมสตูดิโอ (฿3,500/คืน)',
-        deluxe: 'ห้องดีลักซ์ (฿2,500/คืน)',
-        standard: 'ห้องมาตรฐาน (฿1,800/คืน)'
+        premium: 'สวีทพรีเมียมสตูดิโอ (฿1,100/วัน)',
+        deluxe: 'ห้องดีลักซ์ (฿1,000/วัน)',
+        standard: 'ห้องมาตรฐาน (฿650/วัน)'
       },
       guestOptions: {
         '1': '1 แขก',
@@ -200,9 +200,9 @@ const Booking = ({ language }: BookingProps) => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <img 
-              src="/sweed stays logo.jpeg" 
+              src="/sweed stays new logo.jpeg" 
               alt="Sweed Stay Logo" 
-              className="h-20 w-20 rounded-lg object-cover shadow-medium"
+              className="h-32 w-auto rounded-lg object-contain shadow-medium hover:shadow-strong transition-shadow duration-300"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6">

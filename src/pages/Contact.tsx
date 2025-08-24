@@ -164,9 +164,9 @@ const Contact = ({ language }: ContactProps) => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <img 
-              src="/sweed stays logo.jpeg" 
+              src="/sweed stays new logo.jpeg" 
               alt="Sweed Stay Logo" 
-              className="h-20 w-20 rounded-lg object-cover shadow-medium"
+              className="h-32 w-auto rounded-lg object-contain shadow-medium hover:shadow-strong transition-shadow duration-300"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
