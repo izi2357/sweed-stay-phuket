@@ -67,7 +67,6 @@ const Rooms = ({ language }: RoomsProps) => {
           featured: true,
           gallery: [
             '/main bed pic (2).png',
-            '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
             '/lovable-uploads/6166090c-9182-4704-964c-1e04e9903078.png',
             '/lovable-uploads/6279a15d-74a0-49e2-b5f2-1aac10c0a877.png',
             '/lovable-uploads/b615edff-6a15-459b-8d87-79accdb406f0.png',
