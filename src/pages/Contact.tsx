@@ -39,24 +39,24 @@ const Contact = ({ language }: ContactProps) => {
       contactInfo: {
         title: 'Get in Touch',
         address: {
-          title: 'Location',
-          text: 'Phuket, Thailand',
-          description: 'In the heart of beautiful Phuket'
+          title: 'Our Location',
+          text: 'SWEED 14/101 มา.1 เมือง Phuket 83130',
+          description: 'Easily accessible location in the heart of Rawai'
         },
         phone: {
           title: 'Phone',
-          text: '+66 XX XXX XXXX',
-          description: 'Available 24/7 for assistance'
+          text: '084 248 9789',
+          description: 'Available during reception hours'
         },
-        email: {
-          title: 'Email',
-          text: 'info@sweedstay.com',
-          description: 'We reply within 24 hours'
-        },
+                 email: {
+           title: 'Email',
+           text: 'billygomak1@gmail.com',
+           description: 'We reply within 24 hours'
+         },
         hours: {
-          title: 'Office Hours',
-          text: '9:00 AM - 8:00 PM',
-          description: 'Monday to Sunday'
+          title: 'Reception Hours',
+          text: 'Open until midnight',
+          description: 'Check-in available during reception hours • Walk-ins welcome'
         }
       },
       social: {
@@ -88,24 +88,24 @@ const Contact = ({ language }: ContactProps) => {
       contactInfo: {
         title: 'ติดต่อเรา',
         address: {
-          title: 'ที่ตั้ง',
-          text: 'ภูเก็ต ประเทศไทย',
-          description: 'ในใจกลางภูเก็ตที่สวยงาม'
+          title: 'ที่ตั้งของเรา',
+          text: 'SWEED 14/101 มา.1 เมือง Phuket 83130',
+          description: 'ทำเลที่เข้าถึงง่ายในใจกลางราไวย์'
         },
         phone: {
           title: 'โทรศัพท์',
-          text: '+66 XX XXX XXXX',
-          description: 'พร้อมให้ความช่วยเหลือ 24/7'
+          text: '084 248 9789',
+          description: 'พร้อมให้ความช่วยเหลือในช่วงเวลาต้อนรับ'
         },
-        email: {
-          title: 'อีเมล',
-          text: 'info@sweedstay.com',
-          description: 'เราตอบกลับภายใน 24 ชั่วโมง'
-        },
+                 email: {
+           title: 'อีเมล',
+           text: 'billygomak1@gmail.com',
+           description: 'เราตอบกลับภายใน 24 ชั่วโมง'
+         },
         hours: {
-          title: 'เวลาทำการ',
-          text: '9:00 น. - 20:00 น.',
-          description: 'จันทร์ถึงอาทิตย์'
+          title: 'เวลาต้อนรับ',
+          text: 'เปิดจนถึงเที่ยงคืน',
+          description: 'เช็คอินได้ในช่วงเวลาต้อนรับ • ยินดีต้อนรับลูกค้าเดินเข้า'
         }
       },
       social: {
@@ -162,6 +162,13 @@ const Contact = ({ language }: ContactProps) => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/sweed stays logo.jpeg" 
+              alt="Sweed Stay Logo" 
+              className="h-20 w-20 rounded-lg object-cover shadow-medium"
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
             {t.title}
           </h1>
@@ -338,13 +345,17 @@ const Contact = ({ language }: ContactProps) => {
                 <p className="text-sm text-muted-foreground mb-4">
                   {t.map.description}
                 </p>
-                <div className="bg-sage/30 h-48 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground">
-                      {language === 'en' ? 'Interactive map coming soon' : 'แผนที่โต้ตอบเร็วๆ นี้'}
-                    </p>
-                  </div>
+                <div className="h-64 rounded-lg overflow-hidden border border-border">
+                  <iframe
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD0cI4WnCdDQRSts-COVGDP1-RhTMmFlOw&q=SWEED+14%2F101+มา.1+เมือง+Phuket+83130+Thailand"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={language === 'en' ? 'Sweed Stays Location Map' : 'แผนที่ที่ตั้ง Sweed Stays'}
+                  />
                 </div>
               </CardContent>
             </Card>

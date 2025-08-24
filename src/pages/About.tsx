@@ -11,19 +11,19 @@ interface AboutProps {
 const About = ({ language }: AboutProps) => {
   const content = {
     en: {
-      title: 'About Sweed Stay',
+      title: 'About Sweed Stays',
       subtitle: 'Premium accommodation near Nai Harn Beach, Phuket',
       story: {
         title: 'Our Story',
         content: [
-          'Sweed Stay was born from a simple vision: to create exceptional accommodation in one of Phuket\'s most beautiful locations. Situated near the pristine Nai Harn Beach, we offer our guests a perfect blend of comfort, quality, and convenience.',
+          'Sweed Stays was born from a simple vision: to create exceptional accommodation in one of Phuket\'s most beautiful locations. Situated near the pristine Nai Harn Beach, we offer our guests a perfect blend of comfort, quality, and convenience.',
           'What started as a dream has become a reality - a place where guests can experience modern comfort while being perfectly positioned to explore the best of Phuket. Every detail, from our carefully chosen furnishings to our thoughtful amenities, reflects our commitment to providing an outstanding stay.',
           'We believe that accommodation is about more than just a place to sleep. It\'s about creating memories, finding relaxation, and having the perfect base for your Phuket adventure. That\'s why we\'ve crafted each room to be comfortable, clean, and welcoming - a space where you can unwind and prepare for your next discovery.'
         ]
       },
       location: {
         title: 'Prime Location',
-        content: 'Located near the beautiful Nai Harn Beach, Sweed Stay offers easy access to one of Phuket\'s most scenic and peaceful beaches. You\'re perfectly positioned to enjoy both the tranquil beach life and Phuket\'s vibrant attractions.',
+        content: 'Located at SWEED 14/101 มา.1 เมือง Phuket 83130, in the heart of Rawai, Sweed Stays offers easy access to one of Phuket\'s most scenic and peaceful areas. You\'re perfectly positioned to enjoy both the tranquil beach life and Phuket\'s vibrant attractions.',
         features: [
           {
             icon: Home,
@@ -80,19 +80,19 @@ const About = ({ language }: AboutProps) => {
       }
     },
     th: {
-      title: 'เกี่ยวกับ Sweed Stay',
+      title: 'เกี่ยวกับ Sweed Stays',
       subtitle: 'ที่พักพรีเมียมใกล้หาดในหาน ภูเก็ต',
       story: {
         title: 'เรื่องราวของเรา',
         content: [
-          'Sweed Stay เกิดขึ้นจากวิสัยทัศน์ที่เรียบง่าย: เพื่อสร้างที่พักที่ยอดเยี่ยมในหนึ่งในทำเลที่สวยงามที่สุดของภูเก็ต ตั้งอยู่ใกล้หาดในหานที่บริสุทธิ์ เราเสนอให้แขกของเราการผสมผสานที่สมบูรณ์แบบของความสะดวกสบาย คุณภาพ และความสะดวก',
+          'Sweed Stays เกิดขึ้นจากวิสัยทัศน์ที่เรียบง่าย: เพื่อสร้างที่พักที่ยอดเยี่ยมในหนึ่งในทำเลที่สวยงามที่สุดของภูเก็ต ตั้งอยู่ใกล้หาดในหานที่บริสุทธิ์ เราเสนอให้แขกของเราการผสมผสานที่สมบูรณ์แบบของความสะดวกสบาย คุณภาพ และความสะดวก',
           'สิ่งที่เริ่มต้นเป็นความฝันได้กลายเป็นความจริง - สถานที่ที่แขกสามารถสัมผัสความสะดวกสบายสมัยใหม่ในขณะที่อยู่ในตำแหน่งที่สมบูรณ์แบบในการสำรวจสิ่งที่ดีที่สุดของภูเก็ต รายละเอียดทุกอย่าง ตั้งแต่เฟอร์นิเจอร์ที่เลือกสรรอย่างรอบคอบไปจนถึงสิ่งอำนวยความสะดวกที่รอบคอบ สะท้อนถึงความมุ่งมั่นของเราในการให้การเข้าพักที่โดดเด่น',
           'เราเชื่อว่าที่พักมีความหมายมากกว่าแค่สถานที่นอน มันเกี่ยวกับการสร้างความทรงจำ การค้นหาการผ่อนคลาย และการมีฐานที่สมบูรณ์แบบสำหรับการผจญภัยภูเก็ตของคุณ นั่นคือเหตุผลที่เราได้สร้างสรรค์แต่ละห้องให้สะดวกสบาย สะอาด และเป็นมิตร - พื้นที่ที่คุณสามารถผ่อนคลายและเตรียมตัวสำหรับการค้นพบครั้งต่อไป'
         ]
       },
       location: {
         title: 'ทำเลยอดเยี่ยม',
-        content: 'ตั้งอยู่ใกล้หาดในหานที่สวยงาม Sweed Stay ให้การเข้าถึงที่ง่ายดายไปยังหนึ่งในหาดที่งดงามและเงียบสงบที่สุดของภูเก็ต คุณอยู่ในตำแหน่งที่สมบูรณ์แบบในการเพลิดเพลินกับทั้งชีวิตชายหาดที่เงียบสงบและสถานที่ท่องเที่ยวที่มีชีวิตชีวาของภูเก็ต',
+        content: 'ตั้งอยู่ที่ SWEED 14/101 มา.1 เมือง Phuket 83130 ในใจกลางราไวย์ Sweed Stays ให้การเข้าถึงที่ง่ายดายไปยังหนึ่งในพื้นที่ที่งดงามและเงียบสงบที่สุดของภูเก็ต คุณอยู่ในตำแหน่งที่สมบูรณ์แบบในการเพลิดเพลินกับทั้งชีวิตชายหาดที่เงียบสงบและสถานที่ท่องเที่ยวที่มีชีวิตชีวาของภูเก็ต',
         features: [
           {
             icon: Home,
@@ -157,6 +157,13 @@ const About = ({ language }: AboutProps) => {
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/sweed stays logo.jpeg" 
+              alt="Sweed Stay Logo" 
+              className="h-20 w-20 rounded-lg object-cover shadow-medium"
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
             {t.title}
           </h1>

@@ -31,7 +31,7 @@ const Booking = ({ language }: BookingProps) => {
   const content = {
     en: {
       title: 'Book Your Stay',
-      subtitle: 'Reserve your perfect room at Sweed Stay and experience the best of Scandinavian comfort in Phuket.',
+             subtitle: 'Reserve your perfect room at Sweed Stays and experience authentic Thai hospitality and modern comfort in Phuket.',
       form: {
         personalInfo: 'Personal Information',
         firstName: 'First Name',
@@ -79,17 +79,17 @@ const Booking = ({ language }: BookingProps) => {
       ],
       successMessage: 'Booking request submitted successfully! We\'ll contact you within 24 hours.',
       errorMessage: 'Please fill in all required fields.',
-      contactInfo: {
-        title: 'Need Help?',
-        subtitle: 'Contact us directly for immediate assistance',
-        phone: '+66 XX XXX XXXX',
-        email: 'booking@sweedstay.com',
-        whatsapp: 'WhatsApp Us'
-      }
+             contactInfo: {
+         title: 'Need Help?',
+         subtitle: 'Contact us directly for immediate assistance',
+         phone: '084 248 9789',
+         email: 'billygomak1@gmail.com',
+         whatsapp: 'WhatsApp Us'
+       }
     },
     th: {
       title: 'จองห้องพัก',
-      subtitle: 'จองห้องที่สมบูรณ์แบบของคุณที่ Sweed Stay และสัมผัสความสะดวกสบายแบบสแกนดิเนเวียที่ดีที่สุดในภูเก็ต',
+             subtitle: 'จองห้องที่สมบูรณ์แบบของคุณที่ Sweed Stays และสัมผัสการต้อนรับแบบไทยแท้และความสะดวกสบายสมัยใหม่ในภูเก็ต',
       form: {
         personalInfo: 'ข้อมูลส่วนตัว',
         firstName: 'ชื่อ',
@@ -137,13 +137,13 @@ const Booking = ({ language }: BookingProps) => {
       ],
       successMessage: 'ส่งคำขอจองสำเร็จแล้ว! เราจะติดต่อคุณภายใน 24 ชั่วโมง',
       errorMessage: 'กรุณากรอกข้อมูลที่จำเป็นทั้งหมด',
-      contactInfo: {
-        title: 'ต้องการความช่วยเหลือ?',
-        subtitle: 'ติดต่อเราโดยตรงเพื่อความช่วยเหลือทันที',
-        phone: '+66 XX XXX XXXX',
-        email: 'booking@sweedstay.com',
-        whatsapp: 'WhatsApp เรา'
-      }
+             contactInfo: {
+         title: 'ต้องการความช่วยเหลือ?',
+         subtitle: 'ติดต่อเราโดยตรงเพื่อความช่วยเหลือทันที',
+         phone: '084 248 9789',
+         email: 'billygomak1@gmail.com',
+         whatsapp: 'WhatsApp เรา'
+       }
     }
   };
 
@@ -198,6 +198,13 @@ const Booking = ({ language }: BookingProps) => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/sweed stays logo.jpeg" 
+              alt="Sweed Stay Logo" 
+              className="h-20 w-20 rounded-lg object-cover shadow-medium"
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
             {t.title}
           </h1>

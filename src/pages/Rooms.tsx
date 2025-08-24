@@ -4,8 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Wifi, Car, Coffee, MapPin, Users, Bed, Bath, Wind, ChefHat, Tv, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import roomDeluxe from '@/assets/room-deluxe.jpg';
-import roomStandard from '@/assets/room-standard.jpg';
 import { Language } from '@/hooks/useLanguage';
 import RoomGallery from '@/components/RoomGallery';
 
@@ -25,27 +23,24 @@ const Rooms = ({ language }: RoomsProps) => {
           price: '฿3,500',
           priceNote: 'per night',
           image: '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
-          description: 'Our largest and most luxurious accommodation. Spacious studio with kitchenette, living area, and stunning balcony views. Perfect for extended stays or those wanting extra space and comfort.',
+          description: 'Our largest and most luxurious accommodation. Spacious studio with living area and stunning hills view through a big full-size window from top to bottom. Perfect for extended stays or those wanting extra space and comfort.',
           features: [
             { icon: Bed, text: 'King Size Bed' },
             { icon: Users, text: '2-4 Guests' },
-            { icon: ChefHat, text: 'Full Kitchenette' },
             { icon: Wind, text: 'Air Conditioning' },
             { icon: Wifi, text: 'Free Wi-Fi' },
-            { icon: Eye, text: 'Balcony with Hills View' }
+            { icon: Eye, text: 'Full-Size Window with Hills View' }
           ],
           amenities: [
             'Spacious studio layout (45 sqm)',
             'King size bed with premium linens',
-            'Full kitchenette with refrigerator',
             'Comfortable living area with sofa',
-            'Private balcony with hillside views',
+            'Big full-size window from top to bottom with hills view',
             'Modern ensuite bathroom',
             'Air conditioning throughout',
             'Free high-speed Wi-Fi',
             'Flat-screen TV with cable',
             'Dining area with bar stools',
-            'Microwave and cooking facilities',
             'Coffee/tea making facilities',
             'Hair dryer and toiletries',
             'Safe deposit box',
@@ -62,8 +57,8 @@ const Rooms = ({ language }: RoomsProps) => {
             '/lovable-uploads/19ecf6bc-3596-4c51-bf14-5e2d41329e6d.png',
             '/lovable-uploads/ef15cb6f-0ed4-47ba-8421-9eea76fa44c9.png',
             '/lovable-uploads/225612aa-752c-4270-98a9-4b6394d74fdd.png',
-            '/lovable-uploads/c8dd8492-ed20-484a-b69e-485335e65249.png',
-            '/lovable-uploads/4c4fcf55-9067-4eff-b4e0-e3645d8a7187.png'
+            '/rooms pictures/2ndtoilet.JPG',
+            '/rooms pictures/2ndtoiletsmall.JPG'
           ]
         },
         {
@@ -71,7 +66,7 @@ const Rooms = ({ language }: RoomsProps) => {
           name: 'Deluxe Room',
           price: '฿2,500',
           priceNote: 'per night',
-          image: roomDeluxe,
+          image: '/rooms pictures/2ndbig.JPG',
           description: 'Spacious room with modern amenities and private balcony. Perfect for couples or small families seeking comfort and style.',
           features: [
             { icon: Bed, text: 'King Size Bed' },
@@ -94,25 +89,38 @@ const Rooms = ({ language }: RoomsProps) => {
             'Safe deposit box'
           ],
           popular: false,
-          featured: false
+          featured: false,
+          gallery: [
+            '/rooms pictures/2ndbig.JPG',
+            '/rooms pictures/2ndbig (1).JPG',
+            '/rooms pictures/2ndbig (2).JPG',
+            '/rooms pictures/2ndbig (3).JPG',
+            '/rooms pictures/2ndbig (4).JPG',
+            '/rooms pictures/2ndbig (5).JPG',
+            '/rooms pictures/2ndbig (6).JPG',
+            '/rooms pictures/2ndbigtoilet.jpg',
+            '/rooms pictures/2ndbigtoilet (1).jpg'
+          ]
         },
         {
           id: 'standard',
           name: 'Standard Room',
           price: '฿1,800',
           priceNote: 'per night',
-          image: roomStandard,
-          description: 'Cozy and comfortable room with all essential amenities. Ideal for solo travelers or couples.',
+          image: '/rooms pictures/2ndsmall (1).JPG',
+          description: 'Cozy and comfortable room with all essential amenities and private balcony. Ideal for solo travelers or couples.',
           features: [
             { icon: Bed, text: 'Double Bed' },
             { icon: Users, text: '1-2 Guests' },
             { icon: Bath, text: 'Private Bathroom' },
             { icon: Wind, text: 'Air Conditioning' },
             { icon: Wifi, text: 'Free Wi-Fi' },
-            { icon: Coffee, text: 'Coffee Corner' }
+            { icon: Coffee, text: 'Coffee Corner' },
+            { icon: MapPin, text: 'Private Balcony' }
           ],
           amenities: [
             'Comfortable double bed',
+            'Private balcony',
             'Modern ensuite bathroom',
             'Air conditioning',
             'Free high-speed Wi-Fi',
@@ -124,7 +132,15 @@ const Rooms = ({ language }: RoomsProps) => {
             'Wardrobe'
           ],
           popular: false,
-          featured: false
+          featured: false,
+          gallery: [
+            '/rooms pictures/2ndsmall (1).JPG',
+            '/rooms pictures/2ndsmall (2).JPG',
+            '/rooms pictures/2ndsmall (3).JPG',
+            '/rooms pictures/2ndsmall.jpg',
+            '/rooms pictures/2ndsmalltoilet.jpg',
+            '/rooms pictures/2ndsmalltoilet (1).jpg'
+          ]
         }
       ],
       bookNow: 'Book Now',
@@ -133,10 +149,17 @@ const Rooms = ({ language }: RoomsProps) => {
       commonAmenities: [
         'Daily housekeeping',
         'Fresh towels and linens',
-        'Complimentary breakfast',
+        'Air conditioning',
+        'Flat-screen TV',
+        'Free high-speed Wi-Fi',
+        'Private bathroom',
+        'Coffee/tea making facilities',
+        'Hair dryer',
+        'Safe deposit box',
         'Free parking',
-        '24/7 front desk support',
-        'Luggage storage'
+        'Luggage storage',
+        '24-hour security',
+        'Clean and comfortable bedding'
       ]
     },
     th: {
@@ -149,27 +172,24 @@ const Rooms = ({ language }: RoomsProps) => {
           price: '฿3,500',
           priceNote: 'ต่อคืน',
           image: '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
-          description: 'ที่พักที่ใหญ่ที่สุดและหรูหราที่สุดของเรา สตูดิโอกว้างขวางพร้อมครัวขนาดเล็ก พื้นที่นั่งเล่น และระเบียงพร้อมวิวที่สวยงาม เหมาะสำหรับการพักระยะยาวหรือผู้ที่ต้องการพื้นที่และความสะดวกสบายเพิ่มเติม',
+          description: 'ที่พักที่ใหญ่ที่สุดและหรูหราที่สุดของเรา สตูดิโอกว้างขวางพร้อมพื้นที่นั่งเล่น และวิวเขาแสนสวยผ่านหน้าต่างขนาดใหญ่จากบนลงล่าง เหมาะสำหรับการพักระยะยาวหรือผู้ที่ต้องการพื้นที่และความสะดวกสบายเพิ่มเติม',
           features: [
             { icon: Bed, text: 'เตียงคิงไซส์' },
             { icon: Users, text: 'แขก 2-4 คน' },
-            { icon: ChefHat, text: 'ครัวขนาดเล็กเต็มรูปแบบ' },
             { icon: Wind, text: 'เครื่องปรับอากาศ' },
             { icon: Wifi, text: 'Wi-Fi ฟรี' },
-            { icon: Eye, text: 'ระเบียงวิวเขา' }
+            { icon: Eye, text: 'หน้าต่างขนาดใหญ่วิวเขา' }
           ],
           amenities: [
             'เลย์เอาต์สตูดิโอกว้างขวาง (45 ตร.ม.)',
             'เตียงคิงไซส์พร้อมผ้าปูคุณภาพพรีเมียม',
-            'ครัวขนาดเล็กเต็มรูปแบบพร้อมตู้เย็น',
             'พื้นที่นั่งเล่นที่สะดวกสบายพร้อมโซฟา',
-            'ระเบียงส่วนตัวพร้อมวิวเนินเขา',
+            'หน้าต่างขนาดใหญ่จากบนลงล่างพร้อมวิวเขา',
             'ห้องน้ำในตัวทันสมัย',
             'เครื่องปรับอากาศทั่วห้อง',
             'Wi-Fi ความเร็วสูงฟรี',
             'ทีวีจอแบนพร้อมเคเบิล',
             'พื้นที่รับประทานอาหารพร้อมเก้าอี้บาร์',
-            'ไมโครเวฟและอุปกรณ์ทำอาหาร',
             'อุปกรณ์ชงกาแฟ/ชา',
             'ไดร์เป่าผมและอุปกรณ์อาบน้ำ',
             'ตู้นิรภัย',
@@ -186,8 +206,8 @@ const Rooms = ({ language }: RoomsProps) => {
             '/lovable-uploads/19ecf6bc-3596-4c51-bf14-5e2d41329e6d.png',
             '/lovable-uploads/ef15cb6f-0ed4-47ba-8421-9eea76fa44c9.png',
             '/lovable-uploads/225612aa-752c-4270-98a9-4b6394d74fdd.png',
-            '/lovable-uploads/c8dd8492-ed20-484a-b69e-485335e65249.png',
-            '/lovable-uploads/4c4fcf55-9067-4eff-b4e0-e3645d8a7187.png'
+            '/rooms pictures/2ndtoilet.JPG',
+            '/rooms pictures/2ndtoiletsmall.JPG'
           ]
         },
         {
@@ -195,7 +215,7 @@ const Rooms = ({ language }: RoomsProps) => {
           name: 'ห้องดีลักซ์',
           price: '฿2,500',
           priceNote: 'ต่อคืน',
-          image: roomDeluxe,
+          image: '/rooms pictures/2ndbig.JPG',
           description: 'ห้องกว้างขวางพร้อมสิ่งอำนวยความสะดวกทันสมัย ระเบียงส่วนตัว และวิวที่สวยงาม เหมาะสำหรับคู่รักหรือครอบครวัวเล็ก',
           features: [
             { icon: Bed, text: 'เตียงคิงไซส์' },
@@ -218,25 +238,38 @@ const Rooms = ({ language }: RoomsProps) => {
             'ตู้นิรภัย'
           ],
           popular: false,
-          featured: false
+          featured: false,
+          gallery: [
+            '/rooms pictures/2ndbig.JPG',
+            '/rooms pictures/2ndbig (1).JPG',
+            '/rooms pictures/2ndbig (2).JPG',
+            '/rooms pictures/2ndbig (3).JPG',
+            '/rooms pictures/2ndbig (4).JPG',
+            '/rooms pictures/2ndbig (5).JPG',
+            '/rooms pictures/2ndbig (6).JPG',
+            '/rooms pictures/2ndbigtoilet.jpg',
+            '/rooms pictures/2ndbigtoilet (1).jpg'
+          ]
         },
         {
           id: 'standard',
           name: 'ห้องมาตรฐาน',
           price: '฿1,800',
           priceNote: 'ต่อคืน',
-          image: roomStandard,
-          description: 'ห้องที่อบอุ่นและสะดวกสบายพร้อมสิ่งอำนวยความสะดวกที่จำเป็น เหมาะสำหรับนักเดินทางคนเดียวหรือคู่รัก',
+          image: '/rooms pictures/2ndsmall (1).JPG',
+          description: 'ห้องที่อบอุ่นและสะดวกสบายพร้อมสิ่งอำนวยความสะดวกที่จำเป็นและระเบียงส่วนตัว เหมาะสำหรับนักเดินทางคนเดียวหรือคู่รัก',
           features: [
             { icon: Bed, text: 'เตียงคู่' },
             { icon: Users, text: 'แขก 1-2 คน' },
             { icon: Bath, text: 'ห้องน้ำส่วนตัว' },
             { icon: Wind, text: 'เครื่องปรับอากาศ' },
             { icon: Wifi, text: 'Wi-Fi ฟรี' },
-            { icon: Coffee, text: 'มุมกาแฟ' }
+            { icon: Coffee, text: 'มุมกาแฟ' },
+            { icon: MapPin, text: 'ระเบียงส่วนตัว' }
           ],
           amenities: [
             'เตียงคู่ที่สะดวกสบาย',
+            'ระเบียงส่วนตัว',
             'ห้องน้ำในตัวทันสมัย',
             'เครื่องปรับอากาศ',
             'Wi-Fi ความเร็วสูงฟรี',
@@ -248,7 +281,15 @@ const Rooms = ({ language }: RoomsProps) => {
             'ตู้เสื้อผ้า'
           ],
           popular: false,
-          featured: false
+          featured: false,
+          gallery: [
+            '/rooms pictures/2ndsmall (1).JPG',
+            '/rooms pictures/2ndsmall (2).JPG',
+            '/rooms pictures/2ndsmall (3).JPG',
+            '/rooms pictures/2ndsmall.jpg',
+            '/rooms pictures/2ndsmalltoilet.jpg',
+            '/rooms pictures/2ndsmalltoilet (1).jpg'
+          ]
         }
       ],
       bookNow: 'จองเลย',
@@ -257,10 +298,17 @@ const Rooms = ({ language }: RoomsProps) => {
       commonAmenities: [
         'บริการทำความสะอาดรายวัน',
         'ผ้าเช็ดตัวและผ้าปูที่นอนสด',
-        'อาหารเช้าฟรี',
+        'เครื่องปรับอากาศ',
+        'ทีวีจอแบน',
+        'Wi-Fi ความเร็วสูงฟรี',
+        'ห้องน้ำส่วนตัว',
+        'อุปกรณ์ชงกาแฟ/ชา',
+        'ไดร์เป่าผม',
+        'ตู้นิรภัย',
         'ที่จอดรถฟรี',
-        'บริการแผนกต้อนรับ 24/7',
-        'บริการเก็บกระเป๋า'
+        'บริการเก็บกระเป๋า',
+        'ระบบรักษาความปลอดภัยตลอด 24 ชั่วโมง',
+        'ผ้าปูที่นอนสะอาดและสะดวกสบาย'
       ]
     }
   };
@@ -272,6 +320,13 @@ const Rooms = ({ language }: RoomsProps) => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/sweed stays logo.jpeg" 
+              alt="Sweed Stay Logo" 
+              className="h-20 w-20 rounded-lg object-cover shadow-medium"
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
             {t.title}
           </h1>

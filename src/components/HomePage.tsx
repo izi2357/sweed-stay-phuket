@@ -23,14 +23,14 @@ const HomePage = ({ language }: HomePageProps) => {
         cta: 'Book Your Stay'
       },
       about: {
-        title: 'Welcome to Sweed Stay',
+        title: 'Welcome to Sweed Stays',
         description: 'We offer thoughtfully designed, modern rooms in a premium location near Nai Harn Beach. Our comfortable accommodations provide a perfect base for exploring the best of Phuket while enjoying quality service and amenities.'
       },
       rooms: {
         title: 'Our Beautiful Rooms',
         premium: {
           name: 'Premium Studio Suite',
-          description: 'Our largest suite with kitchenette, living area, and hillside views',
+          description: 'Our largest suite with living area and big full-size window with hills view',
           price: '฿3,500/night'
         },
         deluxe: {
@@ -40,17 +40,16 @@ const HomePage = ({ language }: HomePageProps) => {
         },
         standard: {
           name: 'Standard Room',
-          description: 'Cozy room perfect for solo travelers or couples',
+          description: 'Cozy room with private balcony perfect for solo travelers or couples',
           price: '฿1,800/night'
         }
       },
       features: {
-        title: 'Why Choose Sweed Stay?',
+        title: 'Why Choose Sweed Stays?',
         items: [
           { icon: Wifi, title: 'Free Wi-Fi', description: 'High-speed internet throughout the property' },
           { icon: Car, title: 'Free Parking', description: 'Secure parking available for all guests' },
-          { icon: Coffee, title: 'Daily Breakfast', description: 'Fresh Thai and international breakfast' },
-          { icon: MapPin, title: 'Great Location', description: 'Near Nai Harn Beach and popular attractions' }
+                     { icon: MapPin, title: 'Great Location', description: 'SWEED 14/101 มา.1 เมือง Phuket 83130 - Heart of Rawai' }
         ]
       },
       testimonials: {
@@ -76,14 +75,14 @@ const HomePage = ({ language }: HomePageProps) => {
         cta: 'จองห้องพัก'
       },
       about: {
-        title: 'ยินดีต้อนรับสู่ Sweed Stay',
+        title: 'ยินดีต้อนรับสู่ Sweed Stays',
         description: 'เราเสนอห้องพักสมัยใหม่ที่ออกแบบอย่างรอบคอบในทำเลพรีเมียมใกล้หาดในหาน ที่พักที่สะดวกสบายของเราเป็นฐานที่สมบูรณ์แบบสำหรับการสำรวจภูเก็ตที่ดีที่สุดพร้อมบริการและสิ่งอำนวยความสะดวกคุณภาพ'
       },
       rooms: {
         title: 'ห้องพักสวยงามของเรา',
         premium: {
           name: 'สวีทพรีเมียมสตูดิโอ',
-          description: 'สวีทที่ใหญ่ที่สุดพร้อมครัวขนาดเล็ก พื้นที่นั่งเล่น และวิวเนินเขา',
+          description: 'สวีทที่ใหญ่ที่สุดพร้อมพื้นที่นั่งเล่นและหน้าต่างขนาดใหญ่วิวเขา',
           price: '฿3,500/คืน'
         },
         deluxe: {
@@ -93,17 +92,16 @@ const HomePage = ({ language }: HomePageProps) => {
         },
         standard: {
           name: 'ห้องมาตรฐาน',
-          description: 'ห้องอบอุ่นเหมาะสำหรับนักเดินทางคนเดียวหรือคู่รัก',
+          description: 'ห้องอบอุ่นพร้อมระเบียงส่วนตัวเหมาะสำหรับนักเดินทางคนเดียวหรือคู่รัก',
           price: '฿1,800/คืน'
         }
       },
       features: {
-        title: 'ทำไมต้องเลือก Sweed Stay?',
+        title: 'ทำไมต้องเลือก Sweed Stays?',
         items: [
           { icon: Wifi, title: 'Wi-Fi ฟรี', description: 'อินเทอร์เน็ตความเร็วสูงทั่วทั้งอาคาร' },
           { icon: Car, title: 'ที่จอดรถฟรี', description: 'ที่จอดรถปลอดภัยสำหรับแขกทุกท่าน' },
-          { icon: Coffee, title: 'อาหารเช้าประจำวัน', description: 'อาหารเช้าไทยและนานาชาติสดใหม่' },
-          { icon: MapPin, title: 'ทำเลดีเยี่ยม', description: 'ใกล้หาดในหานและสถานที่ท่องเที่ยวยอดนิยม' }
+                     { icon: MapPin, title: 'ทำเลดีเยี่ยม', description: 'SWEED 14/101 มา.1 เมือง Phuket 83130 - ใจกลางราไวย์' }
         ]
       },
       testimonials: {
@@ -131,15 +129,32 @@ const HomePage = ({ language }: HomePageProps) => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={heroRoom}
-            alt="Sweed Stay Hero"
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
             className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/20" />
+          >
+            <source src="/sweed stays intro video.mp4" type="video/mp4" />
+            {/* Fallback image if video fails to load */}
+            <img
+              src={heroRoom}
+              alt="Sweed Stay Hero"
+              className="w-full h-full object-cover"
+            />
+          </video>
+          <div className="absolute inset-0 bg-black/30" />
         </div>
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/sweed stays logo.jpeg" 
+              alt="Sweed Stay Logo" 
+              className="h-24 w-24 rounded-lg object-cover shadow-strong"
+            />
+          </div>
           <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
             {t.hero.title}
           </h1>
@@ -341,8 +356,8 @@ const HomePage = ({ language }: HomePageProps) => {
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6">
             {language === 'en' 
-              ? 'Ready to Experience Sweed Stay?' 
-              : 'พร้อมที่จะสัมผัส Sweed Stay แล้วหรือยัง?'
+              ? 'Ready to Experience Sweed Stays?' 
+              : 'พร้อมที่จะสัมผัส Sweed Stays แล้วหรือยัง?'
             }
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
