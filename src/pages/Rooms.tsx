@@ -20,7 +20,7 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'premium-suite',
           name: 'Premium Studio Suite',
-          price: '฿3,500',
+          price: '฿1,500',
           priceNote: 'per night',
           image: '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
           description: 'Our largest and most luxurious accommodation. Spacious studio with living area and stunning hills view through a big full-size window from top to bottom. Perfect for extended stays or those wanting extra space and comfort.',
@@ -64,7 +64,7 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'deluxe',
           name: 'Deluxe Room',
-          price: '฿2,500',
+          price: '฿1,300',
           priceNote: 'per night',
           image: '/rooms pictures/2ndbig.JPG',
           description: 'Spacious room with modern amenities and private balcony. Perfect for couples or small families seeking comfort and style.',
@@ -105,7 +105,7 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'standard',
           name: 'Standard Room',
-          price: '฿1,800',
+          price: '฿1,200',
           priceNote: 'per night',
           image: '/rooms pictures/2ndsmall (1).JPG',
           description: 'Cozy and comfortable room with all essential amenities and private balcony. Ideal for solo travelers or couples.',
@@ -169,7 +169,7 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'premium-suite',
           name: 'สวีทพรีเมียมสตูดิโอ',
-          price: '฿3,500',
+          price: '฿1,500',
           priceNote: 'ต่อคืน',
           image: '/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png',
           description: 'ที่พักที่ใหญ่ที่สุดและหรูหราที่สุดของเรา สตูดิโอกว้างขวางพร้อมพื้นที่นั่งเล่น และวิวเขาแสนสวยผ่านหน้าต่างขนาดใหญ่จากบนลงล่าง เหมาะสำหรับการพักระยะยาวหรือผู้ที่ต้องการพื้นที่และความสะดวกสบายเพิ่มเติม',
@@ -213,7 +213,7 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'deluxe',
           name: 'ห้องดีลักซ์',
-          price: '฿2,500',
+          price: '฿1,300',
           priceNote: 'ต่อคืน',
           image: '/rooms pictures/2ndbig.JPG',
           description: 'ห้องกว้างขวางพร้อมสิ่งอำนวยความสะดวกทันสมัย ระเบียงส่วนตัว และวิวที่สวยงาม เหมาะสำหรับคู่รักหรือครอบครวัวเล็ก',
@@ -254,7 +254,7 @@ const Rooms = ({ language }: RoomsProps) => {
         {
           id: 'standard',
           name: 'ห้องมาตรฐาน',
-          price: '฿1,800',
+          price: '฿1,200',
           priceNote: 'ต่อคืน',
           image: '/rooms pictures/2ndsmall (1).JPG',
           description: 'ห้องที่อบอุ่นและสะดวกสบายพร้อมสิ่งอำนวยความสะดวกที่จำเป็นและระเบียงส่วนตัว เหมาะสำหรับนักเดินทางคนเดียวหรือคู่รัก',

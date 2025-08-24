@@ -5,9 +5,6 @@ import { ArrowRight, Wifi, Car, Coffee, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroRoom from '@/assets/hero-room.jpg';
 import phuketView from '@/assets/phuket-view.jpg';
-import suiteMain from '@/assets/suite-main.jpg';
-import roomDeluxe from '@/assets/room-deluxe.jpg';
-import roomStandard from '@/assets/room-standard.jpg';
 import { Language } from '@/hooks/useLanguage';
 
 interface HomePageProps {
@@ -31,17 +28,17 @@ const HomePage = ({ language }: HomePageProps) => {
         premium: {
           name: 'Premium Studio Suite',
           description: 'Our largest suite with living area and big full-size window with hills view',
-          price: '฿3,500/night'
+          price: '฿1,500/night'
         },
         deluxe: {
           name: 'Deluxe Room',
           description: 'Spacious room with modern amenities and private balcony',
-          price: '฿2,500/night'
+          price: '฿1,300/night'
         },
         standard: {
           name: 'Standard Room',
           description: 'Cozy room with private balcony perfect for solo travelers or couples',
-          price: '฿1,800/night'
+          price: '฿1,200/night'
         }
       },
       features: {
@@ -83,17 +80,17 @@ const HomePage = ({ language }: HomePageProps) => {
         premium: {
           name: 'สวีทพรีเมียมสตูดิโอ',
           description: 'สวีทที่ใหญ่ที่สุดพร้อมพื้นที่นั่งเล่นและหน้าต่างขนาดใหญ่วิวเขา',
-          price: '฿3,500/คืน'
+          price: '฿1,500/คืน'
         },
         deluxe: {
           name: 'ห้องดีลักซ์',
           description: 'ห้องกว้างขวางพร้อมสิ่งอำนวยความสะดวกทันสมัยและระเบียงส่วนตัว',
-          price: '฿2,500/คืน'
+          price: '฿1,300/คืน'
         },
         standard: {
           name: 'ห้องมาตรฐาน',
           description: 'ห้องอบอุ่นพร้อมระเบียงส่วนตัวเหมาะสำหรับนักเดินทางคนเดียวหรือคู่รัก',
-          price: '฿1,800/คืน'
+          price: '฿1,200/คืน'
         }
       },
       features: {
@@ -147,18 +144,18 @@ const HomePage = ({ language }: HomePageProps) => {
           <div className="absolute inset-0 bg-black/30" />
         </div>
         
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+        <div className="relative z-10 text-center text-white/50 max-w-4xl mx-auto px-4 mt-20">
           <div className="flex justify-center mb-6">
             <img 
               src="/sweed stays logo.jpeg" 
               alt="Sweed Stay Logo" 
-              className="h-24 w-24 rounded-lg object-cover shadow-strong"
+              className="h-20 w-20 rounded-lg object-cover shadow-strong"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight text-white/40">
             {t.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 font-light opacity-90">
+          <p className="text-xl md:text-2xl mb-8 font-light text-white/30">
             {t.hero.subtitle}
           </p>
           <Link to="/booking">
@@ -210,7 +207,7 @@ const HomePage = ({ language }: HomePageProps) => {
             <Card className="overflow-hidden hover-lift">
               <div className="relative h-64">
                 <img
-                  src={suiteMain}
+                  src="/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png"
                   alt="Premium Studio Suite"
                   className="w-full h-full object-cover"
                 />
@@ -241,7 +238,7 @@ const HomePage = ({ language }: HomePageProps) => {
             <Card className="overflow-hidden hover-lift">
               <div className="relative h-64">
                 <img
-                  src={roomDeluxe}
+                  src="/rooms pictures/2ndbig.JPG"
                   alt="Deluxe Room"
                   className="w-full h-full object-cover"
                 />
@@ -269,7 +266,7 @@ const HomePage = ({ language }: HomePageProps) => {
             <Card className="overflow-hidden hover-lift">
               <div className="relative h-64">
                 <img
-                  src={roomStandard}
+                  src="/rooms pictures/2ndsmall (1).JPG"
                   alt="Standard Room"
                   className="w-full h-full object-cover"
                 />
