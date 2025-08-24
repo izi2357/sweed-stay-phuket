@@ -4,7 +4,6 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Wifi, Car, Coffee, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroRoom from '@/assets/hero-room.jpg';
-import phuketView from '@/assets/phuket-view.jpg';
 import { Language } from '@/hooks/useLanguage';
 
 interface HomePageProps {
@@ -187,8 +186,8 @@ const HomePage = ({ language }: HomePageProps) => {
             </div>
             <div className="relative">
               <img
-                src={phuketView}
-                alt="Phuket View"
+                src="/lovable-uploads/bad65b95-931c-4ee4-bf3d-da8afb85d9d9.png"
+                alt="Premium Studio Suite - Main Room"
                 className="rounded-lg shadow-strong w-full h-96 object-cover"
               />
             </div>

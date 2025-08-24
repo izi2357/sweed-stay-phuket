@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 import { useLanguage } from "./hooks/useLanguage";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ const AppContent = () => {
 
   return (
     <Layout language={language} onLanguageChange={setLanguage}>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage language={language} />} />
         <Route path="/rooms" element={<Rooms language={language} />} />

@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const NotFound = () => {
@@ -26,12 +26,12 @@ const NotFound = () => {
         <p className="text-muted-foreground mb-8">
           The page you're looking for doesn't exist. Let's get you back to exploring Sweed Stays.
         </p>
-        <a 
-          href="/" 
+        <Link 
+          to="/" 
           className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
         >
           Return to Home
-        </a>
+        </Link>
       </div>
     </div>
   );
